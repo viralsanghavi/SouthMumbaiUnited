@@ -1,0 +1,147 @@
+.section-title {
+  margin-bottom: 70px !important;
+}
+
+@media (min-width: 992px) {
+  .col-md-offset-2 {
+    margin-left: 16.66666667%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-8 {
+    width: 66.66666667%;
+  }
+  .col-md-1,
+  .col-md-2,
+  .col-md-3,
+  .col-md-4,
+  .col-md-5,
+  .col-md-6,
+  .col-md-7,
+  .col-md-8,
+  .col-md-9,
+  .col-md-10,
+  .col-md-11,
+  .col-md-12 {
+    float: left;
+  }
+}
+@media (min-width: 768px) {
+  .col-sm-6 {
+    width: 50%;
+  }
+  .col-sm-1,
+  .col-sm-2,
+  .col-sm-3,
+  .col-sm-4,
+  .col-sm-5,
+  .col-sm-6,
+  .col-sm-7,
+  .col-sm-8,
+  .col-sm-9,
+  .col-sm-10,
+  .col-sm-11,
+  .col-sm-12 {
+    float: left;
+  }
+}
+
+.title::after {
+  position: absolute;
+  content: "";
+  background: rgb(255, 165, 75);
+  height: 4px;
+  width: 60px;
+  bottom: 0;
+  margin-left: -30px;
+  left: 50%;
+}
+
+#row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  flex-grow: 3 !important;
+  justify-content: center;
+
+  width: 100%;
+}
+.title {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+  font-weight: 700;
+  font-size: 35px;
+  color: #333;
+  font-family: "Raleway";
+}
+
+.container > p {
+  margin: 0 0 10px;
+  color: #777;
+}
+
+.thumbnail {
+  background: transparent;
+  border: 0;
+}
+.thumbnail {
+  display: block;
+  padding: 4px;
+  background: transparent;
+  border: 0;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  transition: border 0.2s ease-in-out;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.team-img {
+  width: 240px;
+  object-fit: contain;
+}
+.thumbnail > img,
+.thumbnail a > img {
+  margin-right: auto;
+  margin-left: auto;
+}
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#team1,
+.thumbnail,
+.caption {
+  padding: 10px 0 0 0 !important;
+  text-align: center;
+  color: #888 !important;
+}
+
+#team1,
+h4 {
+  margin: 5px 0;
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+}
+#staff{
+  justify-content: center !important;
+  display: flex;
+}

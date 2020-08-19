@@ -1,0 +1,17 @@
+.dataContact {
+  margin-top: 50px;
+  height: 100%;
+  text-align: center;
+}
+.data__form {
+  border: 1px solid lightgray !important;
+}
+
+.data__removeButton {
+  cursor: pointer;
+  text-align: center;
+}
+
+.data__spinner{
+    text-align: center;
+}

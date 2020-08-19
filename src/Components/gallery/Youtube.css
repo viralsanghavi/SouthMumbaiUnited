@@ -1,0 +1,36 @@
+.youtube__Card {
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* background-color: white; */
+  align-items: center;
+  padding-top: 25px;
+}
+
+.youtube__carding {
+  flex: 1;
+  margin-bottom: 15px;
+  width: 400px;
+  margin-right: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.frame {
+  border-radius: 25px;
+}
+
+@media (max-width: 665px) {
+  .youtube__Card {
+    flex-direction: column;
+  }
+  .youtube__carding {
+    margin-right: 0;
+    width: 100%;
+  }
+  .frame {
+    width: 100%;
+  }
+}

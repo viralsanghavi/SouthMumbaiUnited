@@ -1,0 +1,295 @@
+.aboutus {
+  background: white;
+  /* margin-bottom: -30px; */
+}
+.about__info {
+  background-image: url("../../assets/ball-blur-championship-close-up-209841.jpg");
+  background-position: center center;
+  background-size: cover;
+  padding: 220px 0 50px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  justify-content: center;
+}
+
+.about__info::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8));
+}
+.about__details {
+  position: relative;
+  color: white;
+  width: 80%;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+  font-family: "Gotham SSm A", "Gotham SSm B";
+  /* background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)) */
+}
+
+.about__title {
+  /* color: white; */
+  font-size: 46px;
+  width: 240px;
+  line-height: 54px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.about__title::after {
+  /* position: absolute; */
+  content: "";
+  background: #ffa54b;
+  height: 4px;
+  width: auto;
+  bottom: 0;
+  left: 0;
+}
+
+.about__details > h5 {
+  width: 50%;
+  margin-top: 20px;
+}
+
+.about__philosophy {
+  color: #2e282c;
+  margin-top: 70px;
+  /* padding-top: 10px; */
+}
+.about__philosophyTitle {
+  color: black;
+}
+
+.about__philosophy > p {
+  font-size: 21px;
+  margin-top: 15px;
+  line-height: 1.7;
+  font-family: "Gotham SSm A", "Gotham SSm B";
+}
+
+.about__philosophy > span {
+  font-size: 21px;
+  color: brown;
+  display: flex;
+  text-align: center;
+  font-weight: 600;
+  width: 100%;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  line-height: 1.7;
+  flex-direction: column;
+  font-family: "Gotham SSm A", "Gotham SSm B";
+}
+
+.about__story {
+  display: flex;
+  flex: 1;
+  margin-top: 70px;
+}
+.about__storyLeft {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 100px;
+}
+.about__storyLeft > h1 {
+  width: 100%;
+  font-family: "PT Serif";
+  font-size: 44px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+.about__storyLeft > span {
+  width: 100%;
+  font-family: "PT Serif";
+
+  font-size: 17px;
+  color: #ffa54b;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.about__storyRight {
+  width: 100%;
+  margin-top: 10px;
+  padding: 60px 33px;
+}
+.about__storyRight > p {
+  /* width: 100%; */
+  font-size: 16px;
+  font-style: italic;
+
+  color: #2e282c;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.about_missionMain {
+  width: 100%;
+  margin-top: 70px;
+  padding-top: 10px;
+}
+
+.about__mission > p {
+  font-size: 21px;
+  margin-top: 15px;
+  line-height: 1.7;
+  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-style: italic;
+}
+.about__mission {
+  display: flex;
+  width: 100%;
+}
+
+.about__missionLeft,
+.about__missionRight {
+  width: 100%;
+  /* padding: 30px 20px; */
+}
+
+.about__missionLeft > h2,
+.about__missionRight > h2 {
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  font-size: 25px;
+}
+.about__missionLeft > p,
+.about__missionRight > p {
+  font-style: italic;
+  font-size: 19px;
+  margin-top: 15px;
+  line-height: 1.7;
+  font-family: "Gotham SSm A", "Gotham SSm B";
+}
+.about__missionTitle {
+  width: 410px;
+  color: #2e282c;
+}
+
+@media (max-width: 800px) {
+  .about__mission {
+    display: flex;
+    flex-direction: column;
+  }
+  .about__philosophy > span {
+    font-size: 21px;
+    color: brown;
+    display: flex;
+    flex-direction: column;
+  }
+  .about__story {
+    display: flex;
+    flex-direction: column;
+  }
+  .about__missionTitle {
+    width: 100%;
+    font-size: 30px;
+    color: #2e282c;
+  }
+  .about__storyRight {
+    width: 100%;
+    margin-top: 10px;
+    padding: 30px 33px;
+  }
+  .about__info {
+    padding: 50px 0 50px;
+  }
+  .about__storyLeft,
+  .about__storyLeft {
+    padding: 0;
+  }
+  .about__storyLeft > h1 {
+    font-size: 30px;
+  }
+
+  .about__title {
+    font-size: 30px;
+    width: 100%;
+    line-height: 54px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .about__philosophy > p {
+    padding: 7px 14px;
+  }
+}
+
+.curly-quotes:before {
+  content: "\201C";
+  margin-right: 4px;
+  margin-left: -8px;
+}
+
+.curly-quotes:after {
+  content: "\201D";
+  margin-left: 4px;
+  margin-right: -8px;
+}
+
+.curly-quotes:before,
+.curly-quotes:after {
+  display: inline-block;
+  vertical-align: top;
+  height: 30px;
+  line-height: 48px;
+  font-size: 50px;
+  opacity: 0.5;
+}
+
+.contact__street {
+  width: 100%;
+  letter-spacing: 1px;
+  display: flex;
+  padding: 5px;
+  margin-top: 5px;
+  
+  margin-left: -40px;
+  justify-content: center;
+  /* padding-bottom: 20px; */
+}
+
+
+
+.contact__street > span {
+  width: 44%;
+  margin-left: 15px;
+  font-size: 15px;
+  margin-top: -5px;
+  font-weight: 500;
+}
+
+.contact__street > a{
+  text-decoration: none;
+  margin-left: 15px;
+  font-weight: 500;
+  color:  black;
+  margin-top: -3px;
+
+  justify-content: center;
+}
+
+
+
+.contact__loc{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contact__loc > h5{
+  text-align: center;
+}
