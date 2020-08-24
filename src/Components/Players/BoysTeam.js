@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Container, Card, CardImg, Row, Table } from 'reactstrap'
+import { Container, Row, Table, Spinner } from 'reactstrap'
 import './player.css'
 import { database } from '../config/firebaseConfig'
 
@@ -13,8 +13,8 @@ const PCard = ({ position }) => {
         const unsubscribe = database.collection('boysTeam').orderBy('jeseryNumber').onSnapshot(snapshot => (
             setPlayer(snapshot.docs.map(doc => ({ id: doc.id, data: doc.data() })))
         ))
-        return () => {
-            unsubscribe()
+        return async () => {
+            await unsubscribe()
         }
 
         // Will run once when component loads and never again if [] is kept blank
@@ -51,29 +51,34 @@ const PCard = ({ position }) => {
                 }
 
             </div> */}
+            {
+                player ?
 
 
-            <Table striped responsive hover bordered>
+                    <Table striped responsive hover bordered>
 
-                <thead>
-                    <tr>
-                        <th>Player Name</th>
-                        <th>Position</th>
-                        <th>Jersey Number</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {player.map(
-                        play =>
-                            <tr key={play.id}>
-                                <td>{play.data.fname}&nbsp;{play.data.lname}</td>
-                                <td>{play.data.position}</td>
-                                <td>{play.data.jeseryNumber}</td>
+                        <thead>
+                            <tr>
+                                <th>Player Name</th>
+                                <th>Position</th>
+                                <th>Jersey Number</th>
                             </tr>
-                    )}
-                </tbody>
+                        </thead>
+                        <tbody>
+                            {player.map(
+                                play =>
+                                    <tr key={play.id}>
+                                        <td>{play.data.fname}&nbsp;{play.data.lname}</td>
+                                        <td>{play.data.position}</td>
+                                        <td>{play.data.jeseryNumber}</td>
+                                    </tr>
+                            )}
+                        </tbody>
 
-            </Table>
+                    </Table>
+                    :
+                    <Spinner type="grow" color="dark" style={{ width: '3rem', height: '3rem', textAlign: "center" }} className="data__spinner" />
+            }
         </Row >
     )
 }

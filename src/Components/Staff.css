@@ -1,5 +1,5 @@
 .section-title {
-  margin-bottom: 70px !important;
+  /* margin-bottom: 70px !important; */
 }
 
 @media (min-width: 992px) {
@@ -141,7 +141,87 @@ h4 {
   color: #333;
   font-weight: 600;
 }
-#staff{
+#staff {
   justify-content: center !important;
   display: flex;
+}
+
+/* Extra  */
+
+.coaches {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.coaches__left {
+  flex: 0.4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+.section-title {
+  text-align: center;
+}
+.avatar {
+  vertical-align: middle;
+  width: 60px;
+  padding: 2px;
+  border: 2px solid rgb(255, 165, 75);
+  height: 60px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+.coaches__selector:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24), 0 1px 13px rgba(0, 0, 0, 0.48);
+  border-radius: 8px;
+}
+.coaches__selector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* box-shadow: 0 1px 3px rgba(0,0,0.0.12),0 1px 3px rgba(0,0,0.0.24); */
+  width: fit-content;
+  padding: 10px;
+  cursor: pointer;
+  width: 20vw;
+  border: 1px solid #f2f2f2;
+  margin: 10px;
+}
+
+.coach__position {
+  margin: 0 30px;
+  flex: 1;
+}
+.coach__position > p {
+  font-size: 15px;
+  margin: 0;
+}
+
+.coach__position > h1 {
+  font-size: 20px;
+  text-align: justify;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.coaches__right {
+  flex: 0.6;
+  text-align: center;
+  padding: 20px;
+}
+
+.coaches__right > p {
+  margin: 10px;
+  /* padding: 10px; */
+}
+.coaches__right > img {
+  height: 400px;
+}
+.section-title > h5 {
+  font-size: 18px;
+  text-transform: capitalize;
+  color: gray;
 }

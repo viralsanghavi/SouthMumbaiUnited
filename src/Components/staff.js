@@ -1,5 +1,6 @@
 import React from 'react'
 import './Staff.css'
+import { useState } from 'react';
 
 function ReUsableCard({ name, lname, post }) {
     let imgSrc;
@@ -21,13 +22,11 @@ function ReUsableCard({ name, lname, post }) {
     )
 }
 
-class Staff extends React.Component {
-    render() {
-
-
-        return (
-            <div>
-                <div className="text-center" style={{ padding: "100px 0" }} id="team1" >
+const Staff = () => {
+    const [selected, setSelected] = useState(true)
+    return (
+        <div className="coaches">
+            {/* <div className="text-center" style={{ padding: "100px 0" }} id="team1" >
                     <div className="col-md-8 col-md-offset-2 section-title">
                         <h2 className="title">MEET THE TEAM</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.</p>
@@ -48,11 +47,44 @@ class Staff extends React.Component {
 
                     </div>
 
-                </div >
-            </div>
-        )
-    }
+                </div > */}
+            <div className="coaches__left">
+                <div className="section-title">
+                    <h2 className=""> <span style={{ color: "rgb(255, 165, 75)" }}> MEET</span> THE TEAM</h2>
+                    <h5>A Coach is someone who can give correction without resentment.</h5>
+                </div>
 
+                <div className='coaches__selector'>
+                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" className="avatar" />
+                    <div className="coach__position">
+                        <h1>Nitesh Singh</h1>
+                        <p>Director</p>
+                    </div>
+                </div>
+                <div className="coaches__selector">
+                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" className="avatar" />
+                    <div className="coach__position">
+                        <h1>Nitesh Singh</h1>
+                        <p>Director</p>
+                    </div>
+                </div>
+                <div className="coaches__selector">
+                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" className="avatar" />
+                    <div className="coach__position">
+                        <h1>Nitesh Singh</h1>
+                        <p>Director</p>
+                    </div>
+                </div>
+            </div>
+            <div className="coaches__right">
+                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" />
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quisquam id, dolorum sit labore sunt, officia perspiciatis reiciendis consequuntur dolore fuga facilis perferendis nemo a inventore. Architecto praesentium excepturi fugit? </p>
+
+            </div>
+        </div>
+    )
 }
+
+
 
 export default Staff

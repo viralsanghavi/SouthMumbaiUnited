@@ -117,7 +117,7 @@ a {
   top: 0;
   z-index: 1;
   transition-timing-function: ease-in-out !important;
-  transition: all 0.5s !important;
+  transition: all 1s !important;
   color: black;
 }
 @media (min-width: 780px) {

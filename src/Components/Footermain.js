@@ -61,7 +61,7 @@ function Footermain() {
                                 <Link to="/contact">CONTACT</Link>
                             </li>
                             <li>
-                                <Link to="/blog">BLOG</Link>
+                                <Link to="/blog">SHOP</Link>
                             </li>
                             <li>
                                 <Link to="/staff">STAFF</Link>
