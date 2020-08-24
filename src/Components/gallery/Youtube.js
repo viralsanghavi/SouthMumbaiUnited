@@ -12,15 +12,14 @@ const Youtube = () => {
 
     // https://www.googleapis.com/youtube/v3/search?key=AIzaSyAOYG1Ai4mZy6L-ifZgQ8bzS87vA6v3JdA&channelId=UCXgGY0wkgOzynnHvSEVmE3A&part=snippet,id&order=date&maxResults=10
 
-    var finalURL = `https://www.googleapis.com/youtube/v3/search?key=${API}&channelId=${channelID}&part=snippet,id&order=date&maxResults=${result}`
 
+    var finalURL = `https://www.googleapis.com/youtube/v3/search?key=${API}&channelId=${channelID}&part=snippet,id&order=date&maxResults=${result}`
 
     useEffect(() => {
         const clicked = async () => {
             await fetch(finalURL)
                 .then(response => response.json())
                 .then(({ items }) => {
-                    // console.log(items)
                     return setResultYt(items.map(obj => "https://www.youtube.com/embed/" + obj.id.videoId))
                 })
                 .catch((err) => {
@@ -28,7 +27,7 @@ const Youtube = () => {
                 })
         }
         clicked()
-    },[])
+    }, [finalURL])
     return (
         <Container fluid className="youtube__Card">
             {resultyt.map((links, i) => (

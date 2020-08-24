@@ -17,7 +17,7 @@ function Instafeed() {
             const userInfo = JSON.parse(jsonObject)
             // Retrieve only the first 10 results
             const mediaArray = userInfo.entry_data.ProfilePage[0].graphql.user.edge_owner_to_timeline_media.edges.splice(0, 10)
-            
+
             for (let media of mediaArray) {
                 const node = media.node
 
@@ -28,7 +28,7 @@ function Instafeed() {
 
                 // Push the thumbnail src in the array
                 res.push(node.shortcode)
-    
+
                 setUrls(res.map(ur => ur))
             }
         } catch (e) {
@@ -43,7 +43,7 @@ function Instafeed() {
         <div className="overflow__feedInsta">
             {urls.length > 0 && urls.map(book =>
                 <div className="overflow__feed" key={book}>
-                    <InstagramEmbed 
+                    <InstagramEmbed
                         url={`https://www.instagram.com/p/${book}/`}
                         maxWidth={320}
                         hideCaption={false}

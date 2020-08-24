@@ -34,9 +34,9 @@ const AboutUs = () => {
                 </div>
 
                 <div data-aos="zoom-in" className="about_missionMain">
-                    <h2 className="about__title about__missionTitle">Mission and Vision</h2>
+                    <h2 className="about__missionTitle">Mission and Vision</h2>
                     <div className="about__mission">
-                        <Card className="p-4">
+                        <div className="p-4 mission">
                             <div className="about__missionLeft">
                                 <h2>WE ARE ON A MISSION</h2>
                                 <p>
@@ -46,9 +46,9 @@ const AboutUs = () => {
                                 </blockquote>
                                 </p>
                             </div>
-                        </Card>
+                        </div>
 
-                        <Card className="p-4">
+                        <div className="p-4 vision">
                             <div className="about__missionRight">
 
                                 <h2>ROAD MAP</h2>
@@ -60,7 +60,7 @@ const AboutUs = () => {
                                 </p>
 
                             </div>
-                        </Card>
+                        </div>
                     </div>
                 </div>
 
@@ -69,7 +69,7 @@ const AboutUs = () => {
                 </div>
 
                 <div data-aos="zoom-in" className="about__philosophy">
-                    <h2 className="about__title about__philosophyTitle">Philosophy</h2>
+                    <h2 className="about__philosophyTitle">Philosophy</h2>
                     <p>
                         Philosophy of the team is to WIN every match playing the smu way be it friendly or a league match.
                         For this winning mind set, the key is to the win the day.

@@ -1,27 +1,26 @@
 import React, { useState, useEffect } from 'react'
 import './player.css'
-import fire from '../config/firebaseConfig'
+import { database } from '../config/firebaseConfig'
 
-import { Container, Card, CardImg, Row } from 'reactstrap'
+import { Container, Card, CardImg, Row, Table } from 'reactstrap'
 
 
 const PCard = ({ position, }) => {
 
     const [player, setPlayer] = useState([])
-    const database = fire.firestore();
     useEffect(() => {
         const unsubscribe = database.collection('girlsTeam').orderBy('jeseryNumber')
             .onSnapshot(snapshot => (
-                setPlayer(snapshot.docs.map(doc => doc.data()))
+                setPlayer(snapshot.docs.map(doc => ({ id: doc.id, data: doc.data() })))
             ))
-        return async () => {
-            await unsubscribe()
+        return () => {
+            unsubscribe()
         }
 
     }, [])
     return (<Row data-aos="zoom-in" className="rowTeam">
 
-        <div className="grid-12">
+        {/* <div className="grid-12">
             <h1>{position}</h1>
         </div>
 
@@ -29,8 +28,6 @@ const PCard = ({ position, }) => {
             {
                 player.map((p, index) => {
                     if (p.position === position) {
-
-
                         return (
                             < Card key={index} className="float-left player-card" >
                                 <CardImg alt="player" src={require('../../assets/Jay.jpg')} />
@@ -45,7 +42,28 @@ const PCard = ({ position, }) => {
                 })
             }
 
-        </div>
+        </div> */}
+        <Table striped responsive hover bordered>
+
+            <thead>
+                <tr>
+                    <th>Player Name</th>
+                    <th>Position</th>
+                    <th>Jersey Number</th>
+                </tr>
+            </thead>
+            <tbody>
+                {player.map(
+                    play =>
+                        <tr key={play.id}>
+                            <td>{play.data.fname}&nbsp;{play.data.lname}</td>
+                            <td>{play.data.position}</td>
+                            <td>{play.data.jeseryNumber}</td>
+                        </tr>
+                )}
+            </tbody>
+
+        </Table>
     </Row>
     )
 }
@@ -55,9 +73,9 @@ function GirlsTeam() {
     return (
         <Container fluid="xl" className="team__spaceLeft">
             <PCard position="Goalkeeper" />
-            <PCard position="Defender" />
+            {/* <PCard position="Defender" />
             <PCard position="Midfielder" />
-            <PCard position="Forward" />
+            <PCard position="Forward" /> */}
         </Container>
     )
 }

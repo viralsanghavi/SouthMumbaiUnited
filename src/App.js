@@ -21,10 +21,7 @@ import { BuyNow } from './Components/gallery/BuyNow';
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import './App.css';
-import { Spinner } from 'reactstrap';
 
-
-let timer = null
 class App extends React.Component {
 
   render() {

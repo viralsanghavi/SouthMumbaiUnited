@@ -6,9 +6,12 @@
   background-image: url("../../assets/ball-blur-championship-close-up-209841.jpg");
   background-position: center center;
   background-size: cover;
+  background-repeat: no-repeat;
   padding: 220px 0 50px;
   position: relative;
   width: 100%;
+  overflow: hidden;
+  min-height: 83vh;
   height: 100%;
   object-fit: contain;
   justify-content: center;
@@ -38,11 +41,12 @@
 
 .about__title {
   /* color: white; */
-  font-size: 46px;
-  width: 240px;
+  font-size: calc(2.75rem + (20 * (100vw - 400px) / 624));
+  width: fit-content;
   line-height: 54px;
   font-weight: bold;
   margin-bottom: 5px;
+  /* font-family: Slack-Larsseit,"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif; */
   color: white;
 }
 
@@ -51,6 +55,7 @@
   content: "";
   background: #ffa54b;
   height: 4px;
+  margin-top: 5px;
   width: auto;
   bottom: 0;
   left: 0;
@@ -217,8 +222,8 @@
   }
 
   .about__title {
-    font-size: 30px;
-    width: 100%;
+    /* font-size: 30px; */
+    /* width: 100%; */
     line-height: 54px;
     font-weight: bold;
     margin-bottom: 5px;
@@ -257,13 +262,11 @@
   display: flex;
   padding: 5px;
   margin-top: 5px;
-  
+
   margin-left: -40px;
   justify-content: center;
   /* padding-bottom: 20px; */
 }
-
-
 
 .contact__street > span {
   width: 44%;
@@ -273,23 +276,21 @@
   font-weight: 500;
 }
 
-.contact__street > a{
+.contact__street > a {
   text-decoration: none;
   margin-left: 15px;
   font-weight: 500;
-  color:  black;
+  color: black;
   margin-top: -3px;
 
   justify-content: center;
 }
 
-
-
-.contact__loc{
+.contact__loc {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.contact__loc > h5{
+.contact__loc > h5 {
   text-align: center;
 }

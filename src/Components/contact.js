@@ -48,11 +48,18 @@ class Contact extends Component {
   render() {
     return (
       <div className="contact">
+        <div className="contact__form" >
+
+          <form className="form1" onSubmit={this.handleSubmit} data-aos="zoom-in">
+            <h2 className="h2">REACH US</h2>
+            <p className="p" type="Name:"  htmlFor="name"><input className="contact-input" name="name" placeholder="Write your name here.." value={this.state.name} onChange={this.handleChange} required /></p>
+            <p className="p" type="Email:" htmlFor="email"><input required className="contact-input" type="email" value={this.state.email} name="email" placeholder="Let us know how to contact you back.." onChange={this.handleChange} /></p>
+            <p className="p" type="Message:" htmlFor="message"><textarea required className="contact-input" value={this.state.message} name="message" placeholder="What would you like to tell us.." onChange={this.handleChange}></textarea></p>
+            <button className="contact-button">Send</button>
+          </form>
+        </div>
         <div className="contact__details">
           <Row className="contact__pack">
-            <div className=' line' data-aos="zoom-in">
-
-            </div>
             <div className="contact__loc" data-aos="zoom-in">
               <h1>Contact details</h1>
               <div className="contact__street" >
@@ -75,21 +82,7 @@ class Contact extends Component {
 
             </div>
 
-            <div className="contact__address">
-
-
-            </div>
           </Row>
-        </div>
-        <div className="contact__form" >
-
-          <form className="form1" onSubmit={this.handleSubmit} data-aos="zoom-in">
-            <h2 className="h2">REACH US</h2>
-            <p className="p" type="Name:"  htmlFor="name"><input className="contact-input" name="name" placeholder="Write your name here.." value={this.state.name} onChange={this.handleChange} required /></p>
-            <p className="p" type="Email:" htmlFor="email"><input required className="contact-input" type="email" value={this.state.email} name="email" placeholder="Let us know how to contact you back.." onChange={this.handleChange} /></p>
-            <p className="p" type="Message:" htmlFor="message"><textarea required className="contact-input" value={this.state.message} name="message" placeholder="What would you like to tell us.." onChange={this.handleChange}></textarea></p>
-            <button className="contact-button">Send</button>
-          </form>
         </div>
       </div>
     )

@@ -111,9 +111,12 @@
 
 .home__voilenceCard {
   width: 80vw;
+  display: flex;
+  align-items: center;
 }
 .home__voilenceCardImg {
   width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24), 0 1px 13px rgba(0, 0, 0, 0.48);
   object-fit: contain;
 }
 .home__voilenceDetail > h1 {
@@ -126,7 +129,7 @@
 .home__voilenceDetail > p {
   /* font-family: Roboto; */
   font-size: 18px;
-  text-align: -webkit-left;
+  text-align: justify;
   padding: 11px 60px;
   font-family: "Roboto script=all rev=2";
   font-weight: 400;

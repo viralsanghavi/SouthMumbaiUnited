@@ -23,7 +23,7 @@ export default class AsNavFor extends Component {
     const settings = {
 
       infinite: true,
-      // autoplay: true,
+      autoplay: true,
       dots: true,
       dotsClass: "slick-dots slick-thumb",
       centerMode: true,
@@ -47,15 +47,10 @@ export default class AsNavFor extends Component {
         >
           <div className="home__slider">
             <img alt="slider" className="slider__img" src={require("../../assets/boyWhole.jpeg")} />
-            <h1>Boys Team 2019-2020</h1>
           </div>
           <div>
             <img alt="slider" className="slider__img" src={require("../../assets/girlWhole.jpeg")} />
           </div>
-          <div>
-            <img alt="slider" className="slider__img" src={require("../../assets/theme.png")} />
-          </div>
-
         </Slider>
 
       </div >
