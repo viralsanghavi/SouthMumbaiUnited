@@ -33,10 +33,10 @@ const NavBar = () => {
   }, [])
   return (
     <Navbar expand="md" className={`Navbar ${show && "nav__short"}`} color="white"  >
-      <NavbarBrand to="/" className={`${show && "nav__hide"}`}>
-        <img alt="" src={logo} className="Navbar__logo" />
-      </NavbarBrand>
       <Link to="/">
+        <NavbarBrand to="/" className={`${show && "nav__hide"}`}>
+          <img alt="" src={logo} className="Navbar__logo" />
+        </NavbarBrand>
         <NavbarText> SOUTH MUMBAI UNITED</NavbarText>
       </Link>
       <NavbarToggler onClick={toggle} className="mr-2 nav-item">

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Card } from 'reactstrap'
+import { Container } from 'reactstrap'
 import './About.css'
 const AboutUs = () => {
     return (

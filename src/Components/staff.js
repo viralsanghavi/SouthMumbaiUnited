@@ -1,29 +1,27 @@
 import React from 'react'
 import './Staff.css'
-import { useState } from 'react';
 
-function ReUsableCard({ name, lname, post }) {
-    let imgSrc;
-    try {
-        imgSrc = require('../assets/' + name + '.jpg')
-    } catch {
-        imgSrc = require('../assets/Smulogo.png')
-    }
-    return (
+// function ReUsableCard({ name, lname, post }) {
+//     let imgSrc;
+//     try {
+//         imgSrc = require('../assets/' + name + '.jpg')
+//     } catch {
+//         imgSrc = require('../assets/Smulogo.png')
+//     }
+//     return (
 
-        <div className="col-md-3 col-sm-6 ">
-            <div className="thumbnail">
-                <img alt="" src={imgSrc}
+//         <div className="col-md-3 col-sm-6 ">
+//             <div className="thumbnail">
+//                 <img alt="" src={imgSrc}
 
-                    className="team-img" />
-                <div className="caption"><h4>{name + " " + lname}</h4><p>{post}</p></div>
-            </div>
-        </div>
-    )
-}
+//                     className="team-img" />
+//                 <div className="caption"><h4>{name + " " + lname}</h4><p>{post}</p></div>
+//             </div>
+//         </div>
+//     )
+// }
 
 const Staff = () => {
-    const [selected, setSelected] = useState(true)
     return (
         <div className="coaches">
             {/* <div className="text-center" style={{ padding: "100px 0" }} id="team1" >
@@ -79,7 +77,6 @@ const Staff = () => {
             <div className="coaches__right">
                 <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" />
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quisquam id, dolorum sit labore sunt, officia perspiciatis reiciendis consequuntur dolore fuga facilis perferendis nemo a inventore. Architecto praesentium excepturi fugit? </p>
-
             </div>
         </div>
     )

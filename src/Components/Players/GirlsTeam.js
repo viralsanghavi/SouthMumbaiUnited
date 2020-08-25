@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './player.css'
 import { database } from '../config/firebaseConfig'
 
-import { Container, Card, CardImg, Row, Table } from 'reactstrap'
+import { Container, Row, Table } from 'reactstrap'
 
 
 const PCard = ({ position, }) => {
