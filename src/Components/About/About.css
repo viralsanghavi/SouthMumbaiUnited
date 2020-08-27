@@ -69,23 +69,45 @@
 .about__philosophy {
   color: #2e282c;
   margin-top: 70px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
   /* padding-top: 10px; */
 }
 .about__philosophyTitle {
   color: black;
+  font-weight: 600;
 }
 
+.pointers {
+  flex-direction: column;
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  /* position: relative; */
+}
+.pointers > li {
+  float: left;
+  /* position: relative; */
+  /* left: 25%; */
+  height: auto;
+  /* list-style-type: none !important; */
+  content: counter(item) ".";
+  counter-increment: item;
+  /* float: left; */
+}
 .about__philosophy > p {
-  font-size: 21px;
+  font-size: 19px;
+  padding: 0 40px;
   margin-top: 15px;
   line-height: 1.7;
-  font-family: "Gotham SSm A", "Gotham SSm B";
+  /* font-family: "Gotham SSm A", "Gotham SSm B"; */
 }
 
 .about__philosophy > span {
   font-size: 21px;
   color: brown;
   display: flex;
+  font-size: 19px;
   text-align: center;
   font-weight: 600;
   width: 100%;
@@ -94,20 +116,24 @@
   margin-bottom: 30px;
   line-height: 1.7;
   flex-direction: column;
-  font-family: "Gotham SSm A", "Gotham SSm B";
+  /* font-family: "Gotham SSm A", "Gotham SSm B"; */
 }
 
 .about__story {
   display: flex;
   flex: 1;
+  justify-content: space-between;
   margin-top: 70px;
+  align-items: center;
 }
 .about__storyLeft {
   width: 100%;
+  flex: 0.5;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-right: 100px;
+
+  /* padding-right: 100px; */
 }
 .about__storyLeft > h1 {
   width: 100%;
@@ -129,7 +155,10 @@
 .about__storyRight {
   width: 100%;
   margin-top: 10px;
+  flex: 0.5;
   padding: 60px 33px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
 }
 .about__storyRight > p {
   /* width: 100%; */
@@ -151,7 +180,7 @@
   font-size: 21px;
   margin-top: 15px;
   line-height: 1.7;
-  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-family: "Open Sans", sans-serif;
   font-style: italic;
 }
 .about__mission {
@@ -170,19 +199,25 @@
   width: 100%;
   text-align: center;
   font-weight: 500;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+
   font-size: 25px;
 }
-.about__missionLeft > p,
-.about__missionRight > p {
+.about__missionLeft > blockquote,
+.about__missionRight > blockquote {
   font-style: italic;
+  text-align: justify;
   font-size: 19px;
   margin-top: 15px;
   line-height: 1.7;
-  font-family: "Gotham SSm A", "Gotham SSm B";
+  font-family: "Open Sans", sans-serif;
 }
 .about__missionTitle {
   width: 410px;
   color: #2e282c;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
 }
 
 @media (max-width: 800px) {
@@ -293,4 +328,11 @@
 }
 .contact__loc > h5 {
   text-align: center;
+}
+
+.mission,
+.vision {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24), 0 1px 13px rgba(0, 0, 0, 0.48);
+  margin: 20px 15px 0 0;
+  border-radius: 10px;
 }

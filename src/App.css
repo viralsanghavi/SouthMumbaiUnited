@@ -605,13 +605,6 @@ a {
   background-image: url("https://static2.tripoto.com/media/filter/nxl/img/254497/TripDocument/1459424126_mumbai_skyline022203.jpg");
 }
 
-.mission,
-.vision {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24), 0 1px 13px rgba(0, 0, 0, 0.48);
-  margin: 20px;
-  border-radius: 10px;
-}
-
 @media (min-width: 768px) {
   .navbar-expand-md {
     flex-flow: nowrap;
@@ -674,6 +667,7 @@ a {
   }
   .navbar-text {
     margin: 0;
+    margin-left: 20px;
     margin-right: 1px;
     font-size: 22px;
     padding: 0;
@@ -865,4 +859,18 @@ a {
   100% {
     background-image: url("./assets/close-up-of-hand-holding-pencil-over-white-background-316466.jpg");
   }
+}
+
+.spalsh > img {
+  object-fit: contain;
+}
+
+/* .spalsher {
+  height: 100vh;
+} */
+
+.spalsh {
+  height: 100vh;
+  display: grid;
+  place-items: center;
 }

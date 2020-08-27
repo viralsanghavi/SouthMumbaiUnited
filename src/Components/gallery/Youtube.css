@@ -20,6 +20,12 @@
 }
 .frame {
   border-radius: 25px;
+  box-shadow: 0 6px 18px -9px rgba(0, 0, 0, 0.75);
+  border: 0 solid #000;
+  transition: transform 0.1s ease-in;
+}
+.frame:hover {
+  transform: scale(1.04);
 }
 
 @media (max-width: 665px) {

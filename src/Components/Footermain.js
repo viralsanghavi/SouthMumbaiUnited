@@ -32,7 +32,7 @@ function Footermain() {
                             <br />
 
                     South Mumbai</p>
-                        <p>EMAIL : <strong style={{ textTransform: "lowercase" }}>southmumbaiunited@gmail.com</strong></p>
+                        <p>EMAIL : <strong style={{ textTransform: "lowercase" }}>southmumbaiunitedfc@gmail.com</strong></p>
                         <br />
                         <p>TEL : <strong>+91 9324686568</strong></p>
                         <br />

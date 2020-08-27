@@ -22,6 +22,7 @@ const NavBar = () => {
   const [show, handleShow] = useState(false)
 
   useEffect(() => {
+
     window.addEventListener("scroll", () => {
       if (window.scrollY > 80) {
         handleShow(true)
@@ -33,8 +34,8 @@ const NavBar = () => {
   }, [])
   return (
     <Navbar expand="md" className={`Navbar ${show && "nav__short"}`} color="white"  >
-      <Link to="/">
-        <NavbarBrand to="/" className={`${show && "nav__hide"}`}>
+      <Link to="/" style={{ display: 'flex', alignItems: "center", justifyContent: "space-between" }}>
+        <NavbarBrand className={`${show && "nav__hide"}`}>
           <img alt="" src={logo} className="Navbar__logo" />
         </NavbarBrand>
         <NavbarText> SOUTH MUMBAI UNITED</NavbarText>

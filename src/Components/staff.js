@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Staff.css'
+import CoachLarge from './CoachLarge'
 
 // function ReUsableCard({ name, lname, post }) {
 //     let imgSrc;
@@ -22,6 +23,10 @@ import './Staff.css'
 // }
 
 const Staff = () => {
+    const [coachInfo, setCoachInfo] = useState({
+        name: "Nitesh Singh",
+        role: "Director"
+    })
     return (
         <div className="coaches">
             {/* <div className="text-center" style={{ padding: "100px 0" }} id="team1" >
@@ -52,32 +57,30 @@ const Staff = () => {
                     <h5>A Coach is someone who can give correction without resentment.</h5>
                 </div>
 
-                <div className='coaches__selector'>
+                <div className='coaches__selector' onClick={e => setCoachInfo({ name: "Nitesh Singh", role: "Director" })}>
                     <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" className="avatar" />
                     <div className="coach__position">
                         <h1>Nitesh Singh</h1>
                         <p>Director</p>
                     </div>
                 </div>
-                <div className="coaches__selector">
+                <div className="coaches__selector" onClick={e => setCoachInfo({ name: "Raunaq Desai", role: "Head Coach" })} >
                     <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" className="avatar" />
                     <div className="coach__position">
-                        <h1>Nitesh Singh</h1>
-                        <p>Director</p>
+                        <h1>Raunaq Desai</h1>
+                        <p>Head Coach</p>
                     </div>
                 </div>
-                <div className="coaches__selector">
+                <div className="coaches__selector" onClick={e => setCoachInfo({ name: "Viral Sanghavi", role: "Tech Lead" })} >
                     <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" className="avatar" />
                     <div className="coach__position">
-                        <h1>Nitesh Singh</h1>
-                        <p>Director</p>
+                        <h1>Viral Sanghavi</h1>
+                        <p>Tech Lead</p>
                     </div>
                 </div>
             </div>
-            <div className="coaches__right">
-                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" />
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quisquam id, dolorum sit labore sunt, officia perspiciatis reiciendis consequuntur dolore fuga facilis perferendis nemo a inventore. Architecto praesentium excepturi fugit? </p>
-            </div>
+
+            <CoachLarge role={coachInfo.role} name={coachInfo.name} />
         </div>
     )
 }

@@ -1,3 +1,6 @@
+p {
+  text-align: justify;
+}
 .section-title {
   /* margin-bottom: 70px !important; */
 }
@@ -177,8 +180,12 @@ h4 {
 .coaches__selector:hover {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24), 0 1px 13px rgba(0, 0, 0, 0.48);
   border-radius: 8px;
+  transform: scale(1.1);
 }
+
+
 .coaches__selector {
+  transition: transform 0.1s ease-in;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -186,13 +193,13 @@ h4 {
   width: fit-content;
   padding: 10px;
   cursor: pointer;
-  width: 20vw;
+  width: fit-content;
   border: 1px solid #f2f2f2;
   margin: 10px;
 }
 
 .coach__position {
-  margin: 0 30px;
+  margin-left: 10px;
   flex: 1;
 }
 .coach__position > p {
@@ -213,15 +220,37 @@ h4 {
   padding: 20px;
 }
 
+
 .coaches__right > p {
   margin: 10px;
-  /* padding: 10px; */
+  padding: 10px;
+  font-size: 16px;
+  text-align: justify !important;
+  font-family: "Open Sans", sans-serif;
 }
+.coaches__right > h3 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+}
+
 .coaches__right > img {
-  height: 400px;
+  padding: 20px;
+  height: 360px;
 }
 .section-title > h5 {
   font-size: 18px;
   text-transform: capitalize;
   color: gray;
+}
+
+@media(max-width: 770px){
+  .coaches{
+    flex-direction: column;
+  }
+.coaches__right > img {
+  height: 250px;
+  padding: 20px;
+}
 }

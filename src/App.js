@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import NavBar from './Components/Navbar';
@@ -20,65 +20,81 @@ import { BuyNow } from './Components/gallery/BuyNow';
 
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import Splash from './Splash'
 import './App.css';
 
-class App extends React.Component {
+const App = () => {
 
-  render() {
+  const [isLoading, setIsLoading] = useState(true)
 
-    return (
-      <BrowserRouter>
-        <div className="page-container" >
-          <NavBar />
-          <ToastContainer />
-          <Switch>
-            <Route exact path='/about'>
-              <ScrollToTop />
-              <AboutUs />
-            </Route>
-            <Route exact path='/team'>
-              <ScrollToTop />
-              <Players />
-            </Route>
-            <Route exact path='/contact'>
-              <ScrollToTop />
-              <Contact />
-            </Route>
-            <Route exact path='/blog'>
-              <ScrollToTop />
-              <BuyNow />
-            </Route>
-            <Route exact path='/buyNow'>
-              <ScrollToTop />
-              <BuyNow />
-            </Route>
-            <Route exact path='/staff'>
-              <ScrollToTop />
-              <Staff />
-            </Route>
-            <Route exact path='/loginUser'>
-              <Signin />
-            </Route>
-            <Route exact path='/records'>
-              <LoginToForm />
-            </Route>
-            <Route exact path='/'>
-              <ScrollToTop />
-              <Home />
-            </Route>
-            <Route exact path='/team/boysteam'>
-              <BoysTeam />
-            </Route>
-            <Route exact path='/team/girlsteam'>
-              <GirlsTeam />
-            </Route>
-            <Route path="*" component={PageNotFound} />
-          </Switch>
-          <Footermain />
-        </div>
-      </BrowserRouter>
-    )
+
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+
+    }, 1000);
+  }, []);
+
+  if (isLoading) {
+    return <Splash />;
   }
+
+
+  return (
+    <BrowserRouter>
+      <div className="page-container" >
+        <NavBar />
+        <ToastContainer />
+        <Switch>
+          <Route exact path='/about'>
+            <ScrollToTop />
+            <AboutUs />
+          </Route>
+          <Route exact path='/team'>
+            <ScrollToTop />
+            <Players />
+          </Route>
+          <Route exact path='/contact'>
+            <ScrollToTop />
+            <Contact />
+          </Route>
+          <Route exact path='/blog'>
+
+            <ScrollToTop />
+            <BuyNow />
+          </Route>
+          <Route exact path='/buyNow'>
+            <ScrollToTop />
+            <BuyNow />
+          </Route>
+          <Route exact path='/staff'>
+            <ScrollToTop />
+            <Staff />
+          </Route>
+          <Route exact path='/loginUser'>
+            <Signin />
+          </Route>
+          <Route exact path='/records'>
+            <LoginToForm />
+          </Route>
+          <Route exact path='/'>
+            <ScrollToTop />
+            <Home />
+          </Route>
+          <Route exact path='/team/boysteam'>
+            <BoysTeam />
+          </Route>
+          <Route exact path='/team/girlsteam'>
+            <GirlsTeam />
+          </Route>
+          <Route path="*" component={PageNotFound} />
+        </Switch>
+        <Footermain />
+      </div>
+    </BrowserRouter>
+  )
 }
+
 
 export default App;

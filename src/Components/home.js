@@ -21,7 +21,7 @@ class Home extends React.Component {
             <div className="home">
                 {/* <Container fluid className="home__slider" >
                 </Container > */}
-                    <AsNavFor />
+                <AsNavFor />
                 {/* <div id="slideBg"></div> */}
 
                 {/* 
@@ -52,22 +52,26 @@ class Home extends React.Component {
                         <br />
                         </p>
                         <p className="text-center">
-                            <strong>
+                            <strong style={{
+                                fontFamily: '"Open Sans", sans-serif'
+                            }}>
 
                                 #SayNoToDeforestation
-                                #SayNotoAnimalViolence
+                                #SayNoToAnimalViolence
                                 #GoVegan
                                 #ClimateChangeAwareness
-
+                                #SayNoToSpeciesism
                             </strong>
                         </p>
                     </div>
                 </div>
+
                 <div className="home__poster">
                     <h1 className="home__youtubeLink">South Mumbai United Football Club | Social Media <FaInstagram
                         color="#c13584" className="mr-2"
                     /><FaTwitter color="#00acee" /> </h1>
                 </div>
+
                 <Container fluid className="home__inst">
                     <Row className="p-4 center__feed" >
                         <Card className="home__twitterCard">
@@ -101,7 +105,7 @@ class Home extends React.Component {
                 <Container fluid className="home__youtube" >
                     <Youtube />
                 </Container>
-            </div>
+            </div >
         )
     }
 }
