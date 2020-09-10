@@ -3,7 +3,6 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
   NavLink,
@@ -34,10 +33,10 @@ const NavBar = () => {
   }, [])
   return (
     <Navbar expand="md" className={`Navbar ${show && "nav__short"}`} color="white"  >
-      <Link to="/" style={{ display: 'flex', alignItems: "center", justifyContent: "space-between" }}>
-        <NavbarBrand className={`${show && "nav__hide"}`}>
-          <img alt="" src={logo} className="Navbar__logo" />
-        </NavbarBrand>
+      <Link to="/" style={{ display: 'flex', alignItems: "center", justifyContent: "space-between", marginTop: '5px' }}>
+        <img alt="" src={logo} className={`${show && "nav__hide"} Navbar__logo`} />
+        {/* <NavbarBrand href="/" >
+        </NavbarBrand> */}
         <NavbarText> SOUTH MUMBAI UNITED</NavbarText>
       </Link>
       <NavbarToggler onClick={toggle} className="mr-2 nav-item">

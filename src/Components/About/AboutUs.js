@@ -33,6 +33,18 @@ const AboutUs = () => {
 
                     </div>
                 </div>
+                <div className="about__start">
+                    <h2 className="about__startTitle">
+                        How did it start?
+                    </h2>
+                    <p>
+                        Philosophy of the team is to WIN every match playing the SMU way be it friendly or a league match.
+                        For this winning mind set, the key is to the win the day.
+                        We prepare with the same mind set for every practice as if it’s a match.
+                        If win in practice only then you will win in the match.
+                    </p>
+                </div>
+
 
                 <div data-aos="zoom-in" className="about_missionMain">
                     <h2 className="about__missionTitle">Mission and Vision</h2>
@@ -62,9 +74,6 @@ const AboutUs = () => {
                     </div>
                 </div>
 
-                <div className="about__offerings">
-                    {/* TODO: Add THE SMUWAY */}
-                </div>
 
                 <div data-aos="zoom-in" className="about__philosophy">
                     <h2 className="about__philosophyTitle">Philosophy</h2>
@@ -83,12 +92,7 @@ const AboutUs = () => {
                     </u>
 
                     </span>
-                    <h3> Non negotiable behaviours:</h3>
-                    <ol className="pointers">
-                        <li><strong>Team first </strong>– Think of the team in every thing you do before yourself.</li>
-                        <li><strong> Hard work </strong>– Day to the hard work to achieve common goals.</li>
-                        <li><strong>Excellence </strong>– Every practice you should want to be the best.</li>
-                    </ol>
+
                 </div>
             </Container>
         </div>

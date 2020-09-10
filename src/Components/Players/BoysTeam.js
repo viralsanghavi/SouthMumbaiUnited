@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Container, Row, Table, Spinner } from 'reactstrap'
+import { Container, Row, Table } from 'reactstrap'
 import './player.css'
 import { database } from '../config/firebaseConfig'
 
@@ -19,6 +19,7 @@ const PCard = ({ position }) => {
 
         // Will run once when component loads and never again if [] is kept blank
     }, [])
+
     return (
         <Row data-aos="zoom-in" className="rowTeam">
             {/* 
@@ -51,34 +52,28 @@ const PCard = ({ position }) => {
                 }
 
             </div> */}
-            {
-                player ?
+            <Table striped responsive hover bordered>
 
-
-                    <Table striped responsive hover bordered>
-
-                        <thead>
-                            <tr>
-                                <th>Player Name</th>
-                                <th>Position</th>
-                                <th>Jersey Number</th>
+                <thead>
+                    <tr>
+                        <th>Player Name</th>
+                        <th>Position</th>
+                        <th>Jersey Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {player.map(
+                        play =>
+                            <tr key={play.id}>
+                                <td>{play.data.fname}&nbsp;{play.data.lname}</td>
+                                <td>{play.data.position}</td>
+                                <td>{play.data.jeseryNumber}</td>
                             </tr>
-                        </thead>
-                        <tbody>
-                            {player.map(
-                                play =>
-                                    <tr key={play.id}>
-                                        <td>{play.data.fname}&nbsp;{play.data.lname}</td>
-                                        <td>{play.data.position}</td>
-                                        <td>{play.data.jeseryNumber}</td>
-                                    </tr>
-                            )}
-                        </tbody>
+                    )}
+                </tbody>
 
-                    </Table>
-                    :
-                    <Spinner type="grow" color="dark" style={{ width: '3rem', height: '3rem', textAlign: "center" }} className="data__spinner" />
-            }
+            </Table>
+
         </Row >
     )
 }

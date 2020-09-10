@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import NavBar from './Components/Navbar';
@@ -29,12 +29,10 @@ const App = () => {
 
 
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
+  setTimeout(() => {
+    setIsLoading(false);
 
-    }, 1000);
-  }, []);
+  }, 1000);
 
   if (isLoading) {
     return <Splash />;

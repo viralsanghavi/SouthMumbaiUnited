@@ -57,27 +57,52 @@ const Staff = () => {
                     <h5>A Coach is someone who can give correction without resentment.</h5>
                 </div>
 
-                <div className='coaches__selector' onClick={e => setCoachInfo({ name: "Nitesh Singh", role: "Director" })}>
-                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" className="avatar" />
-                    <div className="coach__position">
-                        <h1>Nitesh Singh</h1>
-                        <p>Director</p>
+                <div className="coaches__scrollNames">
+
+                    <div className='coaches__selector' onClick={e => setCoachInfo({ name: "Nitesh Singh", role: "Director" })}>
+                        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" className="avatar" />
+                        <div className="coach__position">
+                            <h1>Nitesh Singh</h1>
+                            <p>Director</p>
+                        </div>
+                    </div>
+                    <div className="coaches__selector" onClick={e => setCoachInfo({ name: "Raunaq Desai", role: "Head Coach" })} >
+                        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" className="avatar" />
+                        <div className="coach__position">
+                            <h1>Raunaq Desai</h1>
+                            <p>Head Coach</p>
+                        </div>
+                    </div>
+                    <div className="coaches__selector" onClick={e => setCoachInfo({ name: "Viral Sanghavi", role: "Tech Lead" })} >
+                        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" className="avatar" />
+                        <div className="coach__position">
+                            <h1>Viral Sanghavi</h1>
+                            <p>Tech Lead</p>
+                        </div>
+                    </div>
+                    <div className="coaches__selector" onClick={e => setCoachInfo({ name: "Viral Sanghavi", role: "Tech Lead" })} >
+                        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" className="avatar" />
+                        <div className="coach__position">
+                            <h1>Viral Sanghavi</h1>
+                            <p>Tech Lead</p>
+                        </div>
+                    </div>
+                    <div className="coaches__selector" onClick={e => setCoachInfo({ name: "Viral Sanghavi", role: "Tech Lead" })} >
+                        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" className="avatar" />
+                        <div className="coach__position">
+                            <h1>Viral Sanghavi</h1>
+                            <p>Tech Lead</p>
+                        </div>
+                    </div>
+                    <div className="coaches__selector" onClick={e => setCoachInfo({ name: "Viral Sanghavi", role: "Tech Lead" })} >
+                        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" className="avatar" />
+                        <div className="coach__position">
+                            <h1>Viral Sanghavi</h1>
+                            <p>Tech Lead</p>
+                        </div>
                     </div>
                 </div>
-                <div className="coaches__selector" onClick={e => setCoachInfo({ name: "Raunaq Desai", role: "Head Coach" })} >
-                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" className="avatar" />
-                    <div className="coach__position">
-                        <h1>Raunaq Desai</h1>
-                        <p>Head Coach</p>
-                    </div>
-                </div>
-                <div className="coaches__selector" onClick={e => setCoachInfo({ name: "Viral Sanghavi", role: "Tech Lead" })} >
-                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" className="avatar" />
-                    <div className="coach__position">
-                        <h1>Viral Sanghavi</h1>
-                        <p>Tech Lead</p>
-                    </div>
-                </div>
+
             </div>
 
             <CoachLarge role={coachInfo.role} name={coachInfo.name} />

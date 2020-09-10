@@ -1,8 +1,14 @@
 /* css for overall */
 
+@font-face {
+  font-family: myFirstFont;
+  src: url("./assets/911Fonts.com_CenturyGothicRegular__-_911fonts.com_fonts_mhpY.ttf");
+}
+
 * ::after,
 ::before {
   box-sizing: border-box;
+  font-family: myFirstFont !important;
   display: block;
   height: 100%;
 }
@@ -72,10 +78,15 @@ a {
   color: black;
 }
 .navbar-text {
-  font-family: "Raleway", sans-serif;
+  font-family: myFirstFont;
+
   font-size: 23px;
   font-weight: 700;
-  color: #333;
+  color: #111;
+  padding-left: 10px;
+  margin-left: 10px;
+  width: max-content;
+  border-left: 2px solid;
   text-transform: uppercase;
 }
 @media (min-width: 767px) {
@@ -84,11 +95,11 @@ a {
   }
 }
 .Navbar__pages {
-  font-family: "Lato", sans-serif;
+  font-family: myFirstFont;
   text-transform: uppercase;
-  color: #555;
+  color: #111;
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 900;
   padding: 8px 2px;
   border-radius: 0;
   margin: 9px 20px 0 20px;
@@ -104,7 +115,7 @@ a {
   height: 70px;
   transition: 2s ease-in-out;
   object-fit: contain;
-  margin-right: 7px;
+  /* margin-right: 7px; */
   /* position: fixed; */
   transition: 0.2s;
 }
@@ -115,6 +126,8 @@ a {
   width: 100%;
   position: sticky !important;
   top: 0;
+  /* display: flex; */
+  /* align-items: center; */
   z-index: 1;
   transition-timing-function: ease-in-out !important;
   transition: all 1s !important;
@@ -126,7 +139,8 @@ a {
     transition: 1s ease-in-out;
   }
   .nav__short {
-    height: 80px !important;
+    /* display: none; */
+    height: 90px !important;
     background-color: white !important;
     box-shadow: 0 0 20px 0 #000;
     transition: 1s ease-in-out;
@@ -663,14 +677,15 @@ a {
   }
   .Navbar {
     display: flex;
-    flex: 3;
+    align-items: center;
+    justify-content: space-between;
   }
   .navbar-text {
     margin: 0;
     margin-left: 20px;
     margin-right: 1px;
     font-size: 22px;
-    padding: 0;
+    /* padding: 0; */
   }
   .contact {
     display: flex;

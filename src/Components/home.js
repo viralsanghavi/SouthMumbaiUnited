@@ -2,10 +2,11 @@ import React from 'react'
 import { TwitterTimelineEmbed, TwitterFollowButton } from 'react-twitter-embed';
 import { Container, Row, Col, Card, Spinner } from 'reactstrap';
 import Youtube from './gallery/Youtube';
-import AsNavFor from './gallery/memories';
+// import AsNavFor from './gallery/memories';
 import { FaYoutube, FaInstagram, FaTwitter } from 'react-icons/fa'
 import './Home.css'
 import Instafeed from './Instafeed';
+import Slideshow from './Slideshow/Slideshow';
 
 
 
@@ -21,7 +22,8 @@ class Home extends React.Component {
             <div className="home">
                 {/* <Container fluid className="home__slider" >
                 </Container > */}
-                <AsNavFor />
+                {/* <AsNavFor /> */}
+                <Slideshow />
                 {/* <div id="slideBg"></div> */}
 
                 {/* 
@@ -34,7 +36,7 @@ class Home extends React.Component {
                 {/* <div className="home__smuWay">
                     <img src={require("../assets/smuway.jpeg")} />
                 </div> */}
-                <div className="home__voilence">
+                <div className="home__voilence" >
                     <div className="home__voilenceCard">
                         <img className="home__voilenceCardImg" src="https://i.pinimg.com/originals/ef/2c/53/ef2c53177489744f2739b4a5acfadc99.jpg" alt="Vegan" />
                     </div>

@@ -17,12 +17,12 @@ const Players = (props) => {
 
                 <nav className="team__grid" data-aos="zoom-in" >
                     <ul className="team__list">
-                        <li><Link
+                        <li><Link to="/team"
                             className={classnames({ active: active === '1' }) + 'boys'}
                             onClick={() => { toggle('1') }}
                         >BOYS TEAM</Link></li>
                         <li>
-                            <Link
+                            <Link to="/team"
                                 className={classnames({ active: active === '2' }) + 'girls'}
                                 onClick={() => { toggle('2') }}
                             >Girls TEAM</Link></li>
