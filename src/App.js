@@ -27,8 +27,6 @@ const App = () => {
 
   const [isLoading, setIsLoading] = useState(true)
 
-
-
   setTimeout(() => {
     setIsLoading(false);
 
