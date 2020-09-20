@@ -12,6 +12,7 @@
     "firebase": "^7.16.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-hover-video-player": "^6.6.3",
     "react-icons": "^3.10.0",
     "react-instagram-embed": "^1.5.0",
     "react-router-dom": "^5.1.2",

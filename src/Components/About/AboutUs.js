@@ -33,17 +33,7 @@ const AboutUs = () => {
 
                     </div>
                 </div>
-                <div className="about__start">
-                    <h2 className="about__startTitle">
-                        How did it start?
-                    </h2>
-                    <p>
-                        Philosophy of the team is to WIN every match playing the SMU way be it friendly or a league match.
-                        For this winning mind set, the key is to the win the day.
-                        We prepare with the same mind set for every practice as if it’s a match.
-                        If win in practice only then you will win in the match.
-                    </p>
-                </div>
+              
 
 
                 <div data-aos="zoom-in" className="about_missionMain">

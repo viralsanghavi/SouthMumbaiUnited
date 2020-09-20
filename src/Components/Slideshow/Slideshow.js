@@ -1,11 +1,27 @@
 import React from 'react'
 import './Slideshow.css'
+import HoverVideoPlayer from 'react-hover-video-player';
+
+
+const SlideItem = ({ className, team, year, src }) => (
+    <div className={className}>
+        <div className='Content'>
+            <div>
+                <h2>{team} <br />{year}</h2>
+            </div>
+        </div>
+        <div className="ImageContent">
+            <img alt="" src={src} />
+        </div>
+    </div>
+)
+
 const Slideshow = () => {
-    for (let index = 1; index < 5; index++) {
-        setTimeout(() => {
-            document.getElementById(`r${index}`).checked = true
-        }, index * 3000)
-    }
+    // for (let index = 1; index < 5; index++) {
+    //     setTimeout(() => {
+    //         document.getElementById(`r${index}`).checked = true
+    //     }, index * 3000)
+    // }
     return (
 
 
@@ -18,60 +34,36 @@ const Slideshow = () => {
             <input type="radio" name="r" id='r4' />
 
             <div className='Slider'>
-                <div className='slide One'>
-                    <div className='Content'>
-                        <div>
-                            <h2>This Is Title Section One</h2>
-                            <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            </p>
-                            <button>Learn More</button>
-                        </div>
-                    </div>
-                    <div className="ImageContent">
-                        <img alt="" src={require("../../assets/boyWhole.jpeg")} />
-                    </div>
-                </div>
-                <div className='slide Two'>
-                    <div className='Content'>
-                        <div>
-                            <h2>This Is Title Section Two</h2>
-                            <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            </p>
-                            <button>Learn More</button>
-                        </div>
-                    </div>
-                    <div className="ImageContent">
-                        <img alt="" src={require("../../assets/girlWhole.jpeg")} />
-                    </div>
-                </div>
-                <div className='slide Three'>
-                    <div className='Content'>
-                        <div>
-                            <h2>This Is Title Section Three</h2>
-                            <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            </p>
-                            <button>Learn More</button>
-                        </div>
-                    </div>
-                    <div className="ImageContent">
-                        <img alt="" src="https://3.bp.blogspot.com/-_HHywRbdSvs/XwygqxQom9I/AAAAAAAAAHI/wasuf6tD9FgfWAuqvLXh729-myCavjnCQCPcBGAYYCw/s1600/image11.jpg" />
-                    </div>
-                </div>
+                <SlideItem src={require("../../assets/BoysTeam.jpg")} className="slide One" team="Boys Team" year="FY 2019-2020" />
+                <SlideItem src={require("../../assets/GirlsTeam.jpg")} className="slide Two" team="Girls Team" year="FY 2019-2020" />
+                <SlideItem src={require("../../assets/CoachesTeam.jpg")} className="slide Three" team="Staff" />
+
                 <div className='slide Foor'>
                     <div className='Content'>
                         <div>
-                            <h2>This Is Title Section Foor</h2>
-                            <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            </p>
-                            <button>Learn More</button>
+                            <h2>Boys Team Promoted to 2nd Division</h2>
                         </div>
                     </div>
                     <div className="ImageContent">
-                        <img alt="" src="https://1.bp.blogspot.com/-Ra13YXIWa44/XxDC37uvHxI/AAAAAAAAAHc/-u3dbTuI_O871A0b0uK03bkVqkXAkf2EwCNcBGAsYHQ/s320/image04.jpg" />
+                        <HoverVideoPlayer
+                            style={{ zIndex: 0, }}
+                            className="hoverPlayer"
+                            videoSrc={require('../../assets/final.mp4')}
+                            muted={false}
+
+                            restartOnPaused={false}
+                            pausedOverlay={
+                                <img src={'https://i.ytimg.com/vi/jOX-nbRy9kA/sddefault.jpg '} alt=""
+                                    style={{
+                                        // Make the image expand to cover the video's dimensions
+                                        width: "100%",
+                                        height: "100%",
+                                    }} />
+                            }
+                            loadingOverlay={
+                                <div className="loading-spinner-overlay" />
+                            }
+                        />
                     </div>
                 </div>
             </div>

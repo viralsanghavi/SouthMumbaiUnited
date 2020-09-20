@@ -858,7 +858,7 @@ a {
   background-image: url("./assets//close-up-of-hand-holding-pencil-over-white-background-316466.jpg");
 }
 
-@keyframes slideBg {
+/* @keyframes slideBg {
   0% {
     background-image: url("./assets/girlWhole.jpeg");
   }
@@ -874,7 +874,7 @@ a {
   100% {
     background-image: url("./assets/close-up-of-hand-holding-pencil-over-white-background-316466.jpg");
   }
-}
+} */
 
 .spalsh > img {
   object-fit: contain;

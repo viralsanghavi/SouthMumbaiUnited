@@ -20,22 +20,9 @@ class Home extends React.Component {
 
         return (
             <div className="home">
-                {/* <Container fluid className="home__slider" >
-                </Container > */}
-                {/* <AsNavFor /> */}
                 <Slideshow />
                 {/* <div id="slideBg"></div> */}
 
-                {/* 
-                <div className="home__quote">
-                    <FaQuoteLeft size={55} color={"gray"} />
-                    <h1 className="home_quoteOfTheDay">Football is played with the head. Your feet are just the tools.</h1>
-                </div> */}
-
-
-                {/* <div className="home__smuWay">
-                    <img src={require("../assets/smuway.jpeg")} />
-                </div> */}
                 <div className="home__voilence" >
                     <div className="home__voilenceCard">
                         <img className="home__voilenceCardImg" src="https://i.pinimg.com/originals/ef/2c/53/ef2c53177489744f2739b4a5acfadc99.jpg" alt="Vegan" />

@@ -48,10 +48,20 @@
 }
 
 .team__divide {
-  background: #f8f8f8;
+  background: #f9f9f9;
   height: 100%;
 }
 
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgb(255, 212, 84, 0.5) !important;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+  background-color: rgb(255, 255, 255, 0.5) !important;
+}
+
+.team__subNav {
+}
 .grid-12 {
   width: 100%;
   float: left;

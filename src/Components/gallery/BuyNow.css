@@ -6,6 +6,9 @@
   font-family: "Open Sans", sans-serif;
   position: relative;
 }
+.row {
+  justify-content: center;
+}
 .product-grid2 .product-image2 {
   overflow: hidden;
   position: relative;

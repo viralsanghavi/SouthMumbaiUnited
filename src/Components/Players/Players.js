@@ -13,7 +13,7 @@ const Players = (props) => {
     }
     return (
         <div className="teams">
-            <Container>
+            <Container className="team__subNav">
 
                 <nav className="team__grid" data-aos="zoom-in" >
                     <ul className="team__list">
