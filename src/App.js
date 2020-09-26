@@ -1,4 +1,4 @@
-import React, {  useState } from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import NavBar from './Components/Navbar';
@@ -25,7 +25,7 @@ import './App.css';
 
 const App = () => {
 
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
 
   setTimeout(() => {
     setIsLoading(false);

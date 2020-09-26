@@ -3,6 +3,10 @@
   flex-direction: column;
   width: 100%;
 }
+@font-face {
+  font-family: myFirstFont;
+  src: url("../assets/911Fonts.com_CenturyGothicRegular__-_911fonts.com_fonts_mhpY.ttf");
+}
 
 .footer__banner {
   font-size: 2.222222222222222rem;
@@ -11,6 +15,7 @@
   text-align: center;
   border: 2px solid black;
   border-bottom: none;
+  font-family: myFirstFont;
 }
 .footer__mainContent {
   /* margin-right: 40px; */

@@ -55,7 +55,9 @@ class Contact extends Component {
             <p className="p" type="Name:" htmlFor="name"><input className="contact-input" name="name" placeholder="Write your name here.." value={this.state.name} onChange={this.handleChange} required /></p>
             <p className="p" type="Email:" htmlFor="email"><input required className="contact-input" type="email" value={this.state.email} name="email" placeholder="Let us know how to contact you back.." onChange={this.handleChange} /></p>
             <p className="p" type="Message:" htmlFor="message"><textarea required className="contact-input" value={this.state.message} name="message" placeholder="What would you like to tell us.." onChange={this.handleChange}></textarea></p>
-            <button className="contact-button">Send</button>
+            <div className="contact__button">
+              <button className="contact-button">Send</button>
+            </div>
           </form>
         </div>
         <div className="contact__details">
@@ -65,8 +67,24 @@ class Contact extends Component {
             </div>
             <div className="contact__loc" data-aos="zoom-in">
               <h1>Contact details</h1>
-              <div className="contact__street" >
-                <RiMapPin2Line size={28} color={"#a50101"} />
+              <div className="contact__depth">
+                <div>
+                  <RiMapPin2Line size={48} className="contact__icon" color={"#a50101"} />
+                  <span style={{ textTransform: "uppercase" }}>
+                    SOUTH Mumbai sports pvt. ltd
+                    sea view, 6th floor, dongersi rd.
+                    malabar hill, mumbai - 400006
+                </span>
+                </div>
+                <div>
+                  <FiMail size={20} color={"#a50101"} className="contact__icon" /> <a href="mailto:southmumbaiunited@gmail.com">southmumbaiunitedfc@gmail.com</a>
+                </div>
+                <div>
+                  <FiPhone size={20} color={"#a50101"} className="contact__icon" /> <span>+91 9324686568</span>
+                </div>
+              </div>
+              {/* <div className="contact__street" >
+                <RiMapPin2Line size={28} color={"#a50101"} className="contact__icon" />
                 <span style={{ textTransform: "uppercase" }}>
                   SOUTH Mumbai sports pvt. ltd
                   sea view, 6th floor, dongersi rd.
@@ -76,16 +94,11 @@ class Contact extends Component {
 
               <div className="contact__street">
 
-                <FiMail size={20} color={"#a50101"} /> <a href="mailto:southmumbaiunited@gmail.com">southmumbaiunitedfc@gmail.com</a>
               </div>
               <div className="contact__street">
+              <FiMail size={20} color={"#a50101"} /> <a href="mailto:southmumbaiunited@gmail.com">southmumbaiunitedfc@gmail.com</a>
                 <FiPhone size={20} color={"#a50101"} /> <span>+91 9324686568</span>
-              </div>
-
-            </div>
-
-            <div className="contact__address">
-
+              </div> */}
 
             </div>
           </Row>
