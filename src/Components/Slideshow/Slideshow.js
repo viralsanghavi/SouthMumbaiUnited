@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Slideshow.css'
 import HoverVideoPlayer from 'react-hover-video-player';
 
@@ -17,11 +17,32 @@ const SlideItem = ({ className, team, year, src }) => (
 )
 
 const Slideshow = () => {
-    // for (let index = 1; index < 5; index++) {
+    // for (let index = 1; index < 5;) {
     //     setTimeout(() => {
     //         document.getElementById(`r${index}`).checked = true
     //     }, index * 3000)
+    //     if (index === 4) {
+    //         index = 1
+    //     }
+    //     index++
     // }
+    function slide() {
+        var num = 0
+        // style = document.getElementById('r1').checked;
+        window.setInterval(function () {
+            // increase by num 1, reset to 0 at 4
+            num = (num + 1) % 4;
+            document.getElementById(`r${num + 1}`).checked = true
+
+
+            // -600 * 1 = -600, -600 * 2 = -1200, etc 
+            // style.marginLeft = (-600 * num) + "px";
+        }, 3500); // repeat forever, polling every 3 seconds
+    }
+    useEffect(() => {
+        slide()
+    }, [])
+    
     return (
 
 

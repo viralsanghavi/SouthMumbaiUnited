@@ -27,10 +27,9 @@
   flex-direction: row-reverse;
 }
 .slideshow .Slider .slide .Content {
-  width: 40%;
+  width: 35%;
   height: 100%;
   display: table;
-
 }
 .slideshow .Slider .slide .Content div {
   display: table-cell;
@@ -65,7 +64,7 @@
   line-height: 46px;
 }
 .slideshow .Slider .slide .ImageContent {
-  width: 60%;
+  width: 65%;
   height: 100%;
 }
 .slideshow .Slider .slide .ImageContent img {
@@ -152,6 +151,8 @@
   }
   .slideshow .Slider .slide .Content div {
     padding: 10px;
+    vertical-align:  initial;
+
   }
   .slideshow .Slider .slide .Content div h2 {
     font-size: 25px;
@@ -186,6 +187,9 @@
   .slideshow #r4:checked ~ .Navigation label:last-child span {
     background: #111 !important;
   }
+  .slideshow .Slider .slide .ImageContent img {
+    object-fit: contain !important;
+  }
   .slideshow .Slider .slide .Content div a {
     margin: 5px;
     width: 120px;
@@ -198,6 +202,7 @@
     padding: 5px;
   }
   .slideshow .Slider .slide .Content div {
+    vertical-align: none !important;
     padding: 5px;
   }
   .slideshow .Slider .slide .Content div h2 {
@@ -205,10 +210,15 @@
     margin: 5px;
   }
   .slideshow .Slider .slide .Content {
+    
     width: 100%;
     height: 60%;
     display: block;
   }
+  .slideshow .Slider .slide .ImageContent img {
+    object-fit: contain !important;
+  }
+
   .slideshow .Slider .slide .ImageContent {
     width: 100%;
     height: 40%;
