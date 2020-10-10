@@ -25,32 +25,63 @@ import CoachLarge from './CoachLarge'
 const Staff = () => {
     const [coachInfo, setCoachInfo] = useState({
         name: "Nitesh Singh",
-        role: "Director"
+        role: "Director",
+        img: require('../assets/Staff/director.jpg'),
+        bio: "AFC certified Coach, worked with Mohun Bagan Fc and Minerva Punjab FC"
     })
+
+    const team = [
+        {
+            name: "Nitesh Singh",
+            role: "Director",
+            img: require('../assets/Staff/director.jpg'),
+            bio: "AFC certified Coach, worked with Mohun Bagan Fc and Minerva Punjab FC"
+        },
+        {
+            name: "Dr. Raunak Desai",
+            role: "AIFF Certified Coach, Head coach",
+            img: require('../assets/Staff/Raunak.jpg'),
+            bio: "Doctor, AIFF certified coach , worked with Somaiya Sports Academy."
+        },
+        {
+            name: "Elvis Ferrao",
+            role: "Assistant Coach",
+            img: require('../assets/Staff/Elvis.jpg'),
+            bio: 'Performance Team member'
+        },
+        {
+            name: "Jay Koradia",
+            role: "Assistant Coach",
+            img: require('../assets/Staff/Jay.jpg'),
+            bio: "Assistant coach"
+        },
+        {
+            name: "Shreya Bhat",
+            role: "Assistant Coach",
+            img: require('../assets/Staff/Shreya.jpg'),
+            bio: "AIFF certified Grassroots Coach, Represented Mumai District in Inter Women's district in Jalgaon."
+        },
+        {
+            name: "Soureen Gaitonde",
+            role: "Assistant Coach",
+            img: require('../assets/Staff/soureeen.jpg'),
+            bio: "Player, Coach"
+        },
+        {
+            name: "Viral Sanghavi",
+            role: "Assistant Coach",
+            img: 'requirerequire',
+            bio: "Player, Coach , Social media team"
+        },
+        {
+            name: "Ananya Dornal",
+            role: "Social Media",
+            img: require('../assets/Staff/anan.jpg'),
+            bio: "Player, Social media team"
+        },
+    ]
     return (
         <div className="coaches">
-            {/* <div className="text-center" style={{ padding: "100px 0" }} id="team1" >
-                    <div className="col-md-8 col-md-offset-2 section-title">
-                        <h2 className="title">MEET THE TEAM</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.</p>
-                    </div>
-                </div>
-
-                <div className="container">
-                    <div id="row" data-aos="zoom-in">
-                        <ReUsableCard name="Nitesh" lname=" Singh" post="Director" />
-                        <ReUsableCard name="Raunak" lname=" Desai" post="HEAD COACH" />
-                        <ReUsableCard name="Drishti" lname=" Punjabi" post="" />
-                    </div>
-                    <div id="row" data-aos="zoom-in">
-                        <ReUsableCard name="Jay" lname=" Koradia" post="ASSISTANT COACH" />
-                        <ReUsableCard name="Elvis" lname="Ferrao" post="ASSISTANT COACH" />
-                        <ReUsableCard name="Shreya" lname="Bhat" post="ASSISTANT COACH" />
-                        <ReUsableCard name="Viral" lname="Sanghavi" post="ASSISTANT COACH" />
-
-                    </div>
-
-                </div > */}
             <div className="coaches__left">
                 <div className="section-title">
                     <h2 className=""> <span style={{ color: "rgb(255, 165, 75)" }}> MEET</span> THE TEAM</h2>
@@ -58,54 +89,21 @@ const Staff = () => {
                 </div>
 
                 <div className="coaches__scrollNames">
+                    {team.map(person =>
+                        <div className='coaches__selector' onClick={e => setCoachInfo({ name: person.name, role: person.role, img: person.img, bio: person.bio })}>
+                            <img src={person.img} alt="Avatar" className="avatar" />
+                            <div className="coach__position">
+                                <h1>{person.name}</h1>
+                                <p>{person.role}</p>
+                            </div>
+                        </div>
+                    )}
 
-                    <div className='coaches__selector' onClick={e => setCoachInfo({ name: "Nitesh Singh", role: "Director" })}>
-                        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" className="avatar" />
-                        <div className="coach__position">
-                            <h1>Nitesh Singh</h1>
-                            <p>Director</p>
-                        </div>
-                    </div>
-                    <div className="coaches__selector" onClick={e => setCoachInfo({ name: "Raunaq Desai", role: "Head Coach" })} >
-                        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" className="avatar" />
-                        <div className="coach__position">
-                            <h1>Raunaq Desai</h1>
-                            <p>Head Coach</p>
-                        </div>
-                    </div>
-                    <div className="coaches__selector" onClick={e => setCoachInfo({ name: "Viral Sanghavi", role: "Tech Lead" })} >
-                        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" className="avatar" />
-                        <div className="coach__position">
-                            <h1>Viral Sanghavi</h1>
-                            <p>Tech Lead</p>
-                        </div>
-                    </div>
-                    <div className="coaches__selector" onClick={e => setCoachInfo({ name: "Viral Sanghavi", role: "Tech Lead" })} >
-                        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" className="avatar" />
-                        <div className="coach__position">
-                            <h1>Viral Sanghavi</h1>
-                            <p>Tech Lead</p>
-                        </div>
-                    </div>
-                    <div className="coaches__selector" onClick={e => setCoachInfo({ name: "Viral Sanghavi", role: "Tech Lead" })} >
-                        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" className="avatar" />
-                        <div className="coach__position">
-                            <h1>Viral Sanghavi</h1>
-                            <p>Tech Lead</p>
-                        </div>
-                    </div>
-                    <div className="coaches__selector" onClick={e => setCoachInfo({ name: "Viral Sanghavi", role: "Tech Lead" })} >
-                        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" className="avatar" />
-                        <div className="coach__position">
-                            <h1>Viral Sanghavi</h1>
-                            <p>Tech Lead</p>
-                        </div>
-                    </div>
                 </div>
 
             </div>
 
-            <CoachLarge role={coachInfo.role} name={coachInfo.name} />
+            <CoachLarge role={coachInfo.role} name={coachInfo.name} img={coachInfo.img} bio={coachInfo.bio} />
         </div>
     )
 }

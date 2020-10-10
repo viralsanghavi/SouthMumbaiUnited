@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Slideshow.css'
 import HoverVideoPlayer from 'react-hover-video-player';
 
 
-const SlideItem = ({ className, team, year, src }) => (
+const SlideItem = ({ className, team, imgon, year, src }) => (
     <div className={className}>
         <div className='Content'>
             <div>
@@ -11,58 +11,56 @@ const SlideItem = ({ className, team, year, src }) => (
             </div>
         </div>
         <div className="ImageContent">
-            <img alt="" src={src} />
+            <img alt="" src={src} onMouseEnter={() => imgon(false)}
+                onMouseLeave={() => imgon(true)} />
         </div>
     </div>
 )
 
 const Slideshow = () => {
-    // for (let index = 1; index < 5;) {
-    //     setTimeout(() => {
-    //         document.getElementById(`r${index}`).checked = true
-    //     }, index * 3000)
-    //     if (index === 4) {
-    //         index = 1
+    const [isShown, setIsShown] = useState(true);
+    // useEffect(() => {
+    //     let interval;
+    //     var num = 0
+
+    //     if (isShown) {
+    //         interval = window.setInterval(function () {
+    //             // increase by num 1, reset to 0 at 4
+    //             num = (num + 1) % 4;
+    //             document.getElementById(`r${num + 1}`).checked = true
+
+
+    //             // -600 * 1 = -600, -600 * 2 = -1200, etc 
+    //             // style.marginLeft = (-600 * num) + "px";
+    //         }, 3000) // repeat forever, polling every 3 seconds
     //     }
-    //     index++
-    // }
-    function slide() {
-        var num = 0
-        // style = document.getElementById('r1').checked;
-        window.setInterval(function () {
-            // increase by num 1, reset to 0 at 4
-            num = (num + 1) % 4;
-            document.getElementById(`r${num + 1}`).checked = true
 
+    //     return () => clearInterval(interval)
 
-            // -600 * 1 = -600, -600 * 2 = -1200, etc 
-            // style.marginLeft = (-600 * num) + "px";
-        }, 3500); // repeat forever, polling every 3 seconds
-    }
-    useEffect(() => {
-        slide()
-    }, [])
-    
+    // }, [isShown])
+    console.log(isShown);
+
     return (
 
 
 
         <div className='slideshow'>
 
-            <input type="radio" name="r" id='r1' defaultChecked />
-            <input type="radio" name="r" id='r2' />
-            <input type="radio" name="r" id='r3' />
-            <input type="radio" name="r" id='r4' />
+            <input type="radio" className="sliderNudge" name="r" id='r1' defaultChecked />
+            <input type="radio" className="sliderNudge" name="r" id='r2' />
+            <input type="radio" className="sliderNudge" name="r" id='r3' />
+            <input type="radio" className="sliderNudge" name="r" id='r4' />
 
             <div className='Slider'>
-                <SlideItem src={require("../../assets/BoysTeam.jpg")} className="slide One" team="Boys Team" year="FY 2019-2020" />
-                <SlideItem src={require("../../assets/GirlsTeam.jpg")} className="slide Two" team="Girls Team" year="FY 2019-2020" />
-                <SlideItem src={require("../../assets/CoachesTeam.jpg")} className="slide Three" team="Staff" />
+                <SlideItem src={require("../../assets/BoysTeam.jpg")} imgon={setIsShown} className="slide One" team="Boys Team" year="FY 2019-2020" />
+                <SlideItem src={require("../../assets/GirlsTeam.jpg")} imgon={setIsShown} className="slide Two" team="Girls Team" year="FY 2019-2020" />
+                <SlideItem src={require("../../assets/CoachesTeam.jpg")} imgon={setIsShown} className="slide Three" team="Staff" />
 
                 <div className='slide Foor'>
                     <div className='Content'>
                         <div>
                             <h2>Boys Team Promoted to 2nd Division</h2>
+                            <h5>Congratulations on the promotion to 2nd division.</h5>
                         </div>
                     </div>
                     <div className="ImageContent">

@@ -31,10 +31,13 @@ function Footermain() {
                             malabar hill, mumbai - 400006
                             <br />
 
-                    South Mumbai</p>
-                        <p>EMAIL : <strong style={{ textTransform: "lowercase" }}>southmumbaiunitedfc@gmail.com</strong></p>
+                            South Mumbai
+                    </p>
+                        <a href="mailto:southmumbaiunitedfc@gmail.com" style={{
+                            color: 'white'
+                        }}>EMAIL : <strong style={{ textTransform: "lowercase" }}>southmumbaiunitedfc@gmail.com</strong></a >
                         <br />
-                        <p>TEL : <strong>+91 9324686568</strong></p>
+                        <p>Mobile : <strong>+91 9324686568</strong></p>
                         <br />
                     </div>
                     <a href="https://www.google.com/maps/place/Chowpatty,+Girgaon,+Mumbai,+Maharashtra/@18.9542676,72.8098952,17z/data=!3m1!4b1!4m5!3m4!1s0x3be7ce0f115aae39:0x66ef35bcecb08dfe!8m2!3d18.9547494!4d72.8138818" className="map">
@@ -60,9 +63,9 @@ function Footermain() {
                             <li>
                                 <Link to="/contact">CONTACT</Link>
                             </li>
-                            <li>
+                            {/* <li>
                                 <Link to="/blog">SHOP</Link>
-                            </li>
+                            </li> */}
                             <li>
                                 <Link to="/staff">STAFF</Link>
                             </li>

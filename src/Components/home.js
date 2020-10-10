@@ -7,6 +7,7 @@ import { FaYoutube, FaInstagram, FaTwitter } from 'react-icons/fa'
 import './Home.css'
 import Instafeed from './Instafeed';
 import Slideshow from './Slideshow/Slideshow';
+import Services from './Services/Services';
 
 
 
@@ -23,9 +24,10 @@ class Home extends React.Component {
                 <Slideshow />
                 {/* <div id="slideBg"></div> */}
 
+                <Services />
                 <div className="home__voilence" >
                     <div className="home__voilenceCard">
-                        <img className="home__voilenceCardImg" src="https://i.pinimg.com/originals/ef/2c/53/ef2c53177489744f2739b4a5acfadc99.jpg" alt="Vegan" />
+                        <img className="home__voilenceCardImg" loading="lazy" src="https://i.pinimg.com/originals/ef/2c/53/ef2c53177489744f2739b4a5acfadc99.jpg" alt="Vegan" />
                     </div>
                     <div className="home__voilenceDetail">
                         <h1>Initiative</h1>
@@ -41,9 +43,7 @@ class Home extends React.Component {
                         <br />
                         </p>
                         <p className="text-center">
-                            <strong style={{
-                                fontFamily: '"Open Sans", sans-serif'
-                            }}>
+                            <strong>
 
                                 #SayNoToDeforestation
                                 #SayNoToAnimalViolence
@@ -60,6 +60,7 @@ class Home extends React.Component {
                         color="#c13584" className="mr-2"
                     /><FaTwitter color="#00acee" /> </h1>
                 </div>
+
 
                 <Container fluid className="home__inst">
                     <Row className="p-4 center__feed" >

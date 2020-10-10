@@ -69,9 +69,9 @@ const NavBar = () => {
           <NavItem>
             <NavLink tag={Link} to='/contact' className="Navbar__pages">Contact</NavLink>
           </NavItem>
-          <NavItem>
+          {/* <NavItem>
             <NavLink tag={Link} to='/buyNow' className="Navbar__pages">Shop</NavLink>
-          </NavItem>
+          </NavItem> */}
           {/* <NavItem>
             <NavLink tag={Link} to='/blog' className="Navbar__pages">Blog</NavLink>
           </NavItem> */}

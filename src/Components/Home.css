@@ -1,3 +1,8 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url("../assets/911Fonts.com_CenturyGothicRegular__-_911fonts.com_fonts_mhpY.ttf");
+}
+
 .home__slider {
   background-color: #f8f8f8;
 }
@@ -24,9 +29,9 @@
   /* margin-top: 45px; */
   font-size: 2rem;
   line-height: 0.88;
-  font-family: "Bebas Neue", cursive;
+  font-family: myFirstFont;
+  font-weight: 900;
   /* font-family: BebasNeueBold, Helvetica, sans-serif; */
-  font-weight: 400;
   display: block;
   float: left;
   text-align: center;
@@ -128,20 +133,24 @@
   font-family: "Bebas Neue", cursive;
   /* text-align: start !important; */
   font-size: 34px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
+  font-family: myFirstFont;
+  font-weight: 900;
   text-transform: uppercase;
 
   /* border-bottom: 1px solid #fff; */
 }
 
+.home__voilenceDetail > p > strong {
+  font-family: myFirstFont;
+  font-weight: 600;
+}
 .home__voilenceDetail > p {
   /* font-family: Roboto; */
   font-size: 18px;
   text-align: justify;
   padding: 11px 60px;
   /* font-family: "Roboto script=all rev=2"; */
-  font-family: "Open Sans", sans-serif;
+  font-family: myFirstFont;
   font-weight: 400;
   font-style: normal;
 }

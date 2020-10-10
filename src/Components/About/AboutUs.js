@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Container } from 'reactstrap'
 import './About.css'
 const AboutUs = () => {
@@ -26,14 +27,14 @@ const AboutUs = () => {
                     </div>
                     <div className="about__storyRight">
 
-                        <p>Established in 2008, <u>SOUTH MUMBAI UNITED</u> was started with an intention to increase the number of people playing this beautiful game.
+                        <p>Established in 2008, <Link to="/"><u>SOUTH MUMBAI UNITED</u></Link> was started with an intention to increase the number of people playing this beautiful game.
                         <br />
                         Restarted in 2019, this team aims to make SMU stronger and our aim is to constanly ensure quality standards to help player develop holistically.
                     </p>
 
                     </div>
                 </div>
-              
+
 
 
                 <div data-aos="zoom-in" className="about_missionMain">

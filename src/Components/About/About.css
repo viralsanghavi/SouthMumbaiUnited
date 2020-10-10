@@ -1,3 +1,8 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url("../../assets/911Fonts.com_CenturyGothicRegular__-_911fonts.com_fonts_mhpY.ttf");
+}
+
 .aboutus {
   background: white;
   display: grid;
@@ -39,6 +44,7 @@
   display: block;
   margin: 0 auto;
   font-family: "Gotham SSm A", "Gotham SSm B";
+
   /* background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)) */
 }
 
@@ -70,10 +76,14 @@
   margin-top: 20px;
 }
 
+.about__philosophy > p {
+  font-family: myFirstFont;
+  font-weight: bolder;
+}
 .about__philosophy {
   color: #2e282c;
   margin-top: 70px;
-  font-family: "Open Sans", sans-serif;
+  font-family: myFirstFont;
   /* text-align: center; */
   /* padding-top: 10px; */
 }
@@ -162,16 +172,15 @@
   margin-top: 10px;
   flex: 0.5;
   padding: 60px 33px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
+  font-family: myFirstFont;
 }
 .about__storyRight > p {
   /* width: 100%; */
   font-size: 16px;
-  font-style: italic;
+  /* font-style: italic; */
 
   color: #2e282c;
-  font-weight: 500;
+  font-weight: bolder;
   letter-spacing: 2px;
 }
 
@@ -203,7 +212,7 @@
 .about__missionRight > h2 {
   width: 100%;
   text-align: center;
-  font-family: "Open Sans", sans-serif;
+  font-family: myFirstFont;
   font-weight: 600;
 
   font-size: 25px;
@@ -220,8 +229,8 @@
 .about__missionTitle {
   width: 410px;
   color: #2e282c;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
+  font-family: myFirstFont;
+  font-weight: 800;
 }
 
 @media (max-width: 800px) {
