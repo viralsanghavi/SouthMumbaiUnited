@@ -6,11 +6,9 @@ import Youtube from './gallery/Youtube';
 import { FaYoutube, FaInstagram, FaTwitter } from 'react-icons/fa'
 import './Home.css'
 import Instafeed from './Instafeed';
-import Slideshow from './Slideshow/Slideshow';
 import Services from './Services/Services';
-
-
-
+import Slider from './Slider/Slider';
+import { IMAGES } from '../Constants/constants'
 
 class Home extends React.Component {
 
@@ -21,8 +19,7 @@ class Home extends React.Component {
 
         return (
             <div className="home">
-                <Slideshow />
-                {/* <div id="slideBg"></div> */}
+                <Slider slides={IMAGES} autoPlay={3} />
 
                 <Services />
                 <div className="home__voilence" >

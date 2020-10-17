@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './Slideshow.css'
 import HoverVideoPlayer from 'react-hover-video-player';
 

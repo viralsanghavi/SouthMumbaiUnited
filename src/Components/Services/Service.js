@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Card } from 'reactstrap'
+import { Card } from 'reactstrap'
 import './Services.css'
 
 const Service = ({ title, description }) => {
