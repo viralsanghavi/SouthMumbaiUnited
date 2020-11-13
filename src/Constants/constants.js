@@ -1,3 +1,4 @@
 export const IMAGES = [
-    'https://firebasestorage.googleapis.com/v0/b/reactsmu.appspot.com/o/BoysTeam.jpg?alt=media&token=6474c281-8f4a-4916-abe5-11b6cf24e1b3',
-]
+  "https://videohive.img.customer.envatousercontent.com/files/252843832/Slideshow.jpg?auto=compress%2Cformat&fit=crop&crop=top&max-h=8000&max-w=590&s=c00a500073c2c905b47c543da7071aff",
+  "https://www.nchsoftware.com/slideshow/screenshots/topsection-dark_ui.png",
+];
