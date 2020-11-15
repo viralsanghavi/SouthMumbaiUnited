@@ -110,7 +110,7 @@
 
 .home__voilence {
   display: flex;
-  padding: 25px;
+  padding: 25px 40px;
   justify-content: space-evenly;
   background: #fff;
 }

@@ -8,7 +8,6 @@
 .servicePage {
   padding: 10px;
   margin-top: 1rem;
-  /* padding: 3rem; */
   margin: 10px 0;
 }
 .services__heading {
@@ -53,8 +52,9 @@
 @media (max-width: 500px) {
   .service__card > img {
     height: 130px;
+    width: 100%;
   }
   .services {
-    padding: initial;
+    padding: 1rem 2rem;
   }
 }
