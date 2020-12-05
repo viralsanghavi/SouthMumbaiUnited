@@ -12,26 +12,28 @@
     "firebase": "^7.16.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-hover-video-player": "^6.6.3",
+    "react-facebook": "^8.1.4",
     "react-icons": "^3.10.0",
-    "react-instagram-embed": "^1.5.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
-    "react-slick": "^0.27.0",
     "react-toastify": "^6.1.0",
     "react-twitter-embed": "^3.0.3",
-    "reactstrap": "^8.4.1",
-    "slick-carousel": "^1.8.1"
+    "reactstrap": "^8.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && firebase deploy"
+    "deploy": "npm run build && firebase deploy",
+    "lint": "node_modules/.bin/eslint --ext js src"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "rules": {
+      "semi": 0,
+      "no-console": 0
+    }
   },
   "browserslist": {
     "production": [
@@ -44,5 +46,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0"
   }
 }

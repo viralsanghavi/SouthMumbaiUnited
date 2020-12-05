@@ -1,7 +1,12 @@
 .slidershow {
   position: relative;
-  height: 86vh;
-  width: 98.3vw;
+  height: 90vh;
+  width: auto;
   margin: 0 auto;
   overflow: hidden;
+}
+@media (max-width: 546px) {
+  .slidershow {
+    height: auto;
+  }
 }

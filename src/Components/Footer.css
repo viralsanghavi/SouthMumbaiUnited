@@ -13,7 +13,7 @@
   padding-top: 57px;
   padding-bottom: 56px;
   text-align: center;
-  border: 2px solid black;
+  border-top: 2px solid black;
   border-bottom: none;
   font-family: myFirstFont;
 }
@@ -108,7 +108,7 @@ li {
 
 .bottom center {
   padding: 5px;
-  font-size: 0.9375rem;
+  font-size: 0.75rem;
   background: #151515;
   color: white !important;
 }

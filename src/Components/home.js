@@ -2,13 +2,12 @@ import React from "react";
 import { TwitterTimelineEmbed, TwitterFollowButton } from "react-twitter-embed";
 import { Container, Row, Col, Card, Spinner } from "reactstrap";
 import Youtube from "./gallery/Youtube";
-// import AsNavFor from './gallery/memories';
-import { FaYoutube, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaYoutube, FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa";
 import "./Home.css";
-import Instafeed from "./Instafeed";
 import Services from "./Services/Services";
 import Slider from "./Slider/Slider";
 import { IMAGES } from "../Constants/constants";
+import Facebook from "./Social Media/Facebook";
 
 class Home extends React.Component {
   render() {
@@ -34,12 +33,12 @@ class Home extends React.Component {
             <h1>Initiative</h1>
             <p>
               Be it killing of animals for food , commercial products , clothes
-              or using animals in the dairy industry. The torture the animal
-              goes through is same. It has a massive impact on on climate change
-              & the environement as whole through deforestation , emission of
-              green house gases etc. Lets all be empathetic towards every specie
-              living on planet earth. Lets all save our earth & all its species
-              before its too late. South mumbai united proudly supports
+              or using animals in the dairy industry. The torture an Animal goes
+              though is the same. Animal agriculture &amp; Deforestation done
+              for it has a massive impact on climate change. Lets all be
+              empathetic towards all the biodiversity on our planet. Lets Save
+              our planet before its too late. South mumbai united proudly
+              supports
               <br />
             </p>
             <p className="text-center">
@@ -54,6 +53,7 @@ class Home extends React.Component {
         <div className="home__poster">
           <h1 className="home__youtubeLink">
             South Mumbai United Football Club | Social Media{" "}
+            <FaFacebook color="#4267b2" className="mr-2" />
             <FaInstagram color="#c13584" className="mr-2" />
             <FaTwitter color="#00acee" />{" "}
           </h1>
@@ -63,6 +63,16 @@ class Home extends React.Component {
           <Row className="p-4 center__feed">
             <Card className="home__twitterCard">
               <Col className="home__twitter">
+                <Facebook />
+              </Col>
+            </Card>
+            <Card className="home__twitterCard">
+              <Col className="home__twitter">
+                <TwitterFollowButton
+                  screenName={"fc_smu"}
+                  className="twitter__button"
+                  size={"large"}
+                />
                 <TwitterTimelineEmbed
                   SameSite="None"
                   className="object-contain"
@@ -71,9 +81,8 @@ class Home extends React.Component {
                   placeholder={spinner()}
                   noHeader
                   noFooter
-                  options={{ height: 400 }}
+                  options={{ height: "450px" }}
                 />
-                <TwitterFollowButton screenName={"fc_smu"} size={"large"} />
               </Col>
             </Card>
             {/* <Card className="home__twitterCard">

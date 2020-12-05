@@ -34,7 +34,7 @@ const Slider = ({ slides, autoPlay }) => {
       resizeRef.current();
     };
 
-    const interval = setInterval(play, autoPlay * 1000);
+    const interval = setInterval(play, autoPlay * 3000);
     const transitionEnd = window.addEventListener("transitionend", smooth);
     const onResize = window.addEventListener("resize", resize);
 
@@ -43,7 +43,7 @@ const Slider = ({ slides, autoPlay }) => {
       window.removeEventListener("transitionend", transitionEnd);
       window.removeEventListener("resize", onResize);
     };
-  }, []);
+  }, [autoPlay]);
   useEffect(() => {
     if (transition === 0) setStyleProps({ ...styleProps, transition: 0.45 });
   }, [transition]);

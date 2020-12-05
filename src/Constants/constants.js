@@ -1,10 +1,4 @@
 export const IMAGES = [
-  "https://videohive.img.customer.envatousercontent.com/files/252843832/Slideshow.jpg?auto=compress%2Cformat&fit=crop&crop=top&max-h=8000&max-w=590&s=c00a500073c2c905b47c543da7071aff",
-  "https://www.nchsoftware.com/slideshow/screenshots/topsection-dark_ui.png",
-  "https://videohive.img.customer.envatousercontent.com/files/252843832/Slideshow.jpg?auto=compress%2Cformat&fit=crop&crop=top&max-h=8000&max-w=590&s=c00a500073c2c905b47c543da7071aff",
-  "https://www.nchsoftware.com/slideshow/screenshots/topsection-dark_ui.png",
-  "https://videohive.img.customer.envatousercontent.com/files/252843832/Slideshow.jpg?auto=compress%2Cformat&fit=crop&crop=top&max-h=8000&max-w=590&s=c00a500073c2c905b47c543da7071aff",
-  "https://www.nchsoftware.com/slideshow/screenshots/topsection-dark_ui.png",
-  "https://videohive.img.customer.envatousercontent.com/files/252843832/Slideshow.jpg?auto=compress%2Cformat&fit=crop&crop=top&max-h=8000&max-w=590&s=c00a500073c2c905b47c543da7071aff",
-  "https://www.nchsoftware.com/slideshow/screenshots/topsection-dark_ui.png",
+  "https://firebasestorage.googleapis.com/v0/b/reactsmu.appspot.com/o/BoysTeam.jpeg?alt=media&token=7388f299-2b04-4ab8-966e-1b4172cee52b",
+  "https://firebasestorage.googleapis.com/v0/b/reactsmu.appspot.com/o/GirlsTeam.jpeg?alt=media&token=6531fbdf-d17d-4041-946c-3ccbd470d92d",
 ];
