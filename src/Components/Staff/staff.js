@@ -26,7 +26,8 @@ const Staff = () => {
     {
       name: "Nitesh Singh",
       role: "Director",
-      img: require("../../assets/Staff/director.jpg"),
+      img:
+        "https://firebasestorage.googleapis.com/v0/b/reactsmu.appspot.com/o/nitesh.jpg?alt=media&token=0ecb79bc-fbed-4ed9-a966-c7b27bd1d152",
       bio:
         "AFC certified Coach, worked with Mohun Bagan Fc and Minerva Punjab FC",
     },
@@ -63,8 +64,9 @@ const Staff = () => {
     },
     {
       name: "Viral Sanghavi",
-      role: "Coach",
-      img: "requirerequire",
+      role: "Coach /Social Media",
+      img:
+        "https://firebasestorage.googleapis.com/v0/b/reactsmu.appspot.com/o/viral.jpg?alt=media&token=dbdbc849-8810-43cd-89f9-852c3a8dc573",
       bio: "Player, Coach , Social media team",
     },
     {
