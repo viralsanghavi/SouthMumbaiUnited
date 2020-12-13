@@ -29,7 +29,7 @@ export const BuyNow = () => {
                 />
                 <img
                   className="pic-2"
-                  src={require("../../assets/Staff/Elvis.jpg")}
+                  // src={require("../../assets/Staff/Elvis.jpg")}
                   alt="product"
                 />
               </button>
@@ -49,12 +49,12 @@ export const BuyNow = () => {
               <button onClick={notAvailable}>
                 <img
                   className="pic-1"
-                  src={require("../../assets/Staff/Elvis.jpg")}
+                  // src={require("../../assets/Staff/Elvis.jpg")}
                   alt="product"
                 />
                 <img
                   className="pic-2"
-                  src={require("../../assets/Staff/Elvis.jpg")}
+                  // src={require("../../assets/Staff/Elvis.jpg")}
                   alt="product"
                 />
               </button>

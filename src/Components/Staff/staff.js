@@ -34,32 +34,37 @@ const Staff = () => {
     {
       name: "Dr. Raunak Desai",
       role: "AIFF Certified Coach, Head coach",
-      img: require("../../assets/Staff/Raunak.jpg"),
+      img:
+        "https://firebasestorage.googleapis.com/v0/b/reactsmu.appspot.com/o/Raunak.jpg?alt=media&token=6b85ec78-5f10-4f40-a581-b0cd97b1116f",
       bio: "Doctor, AIFF certified coach , worked with Somaiya Sports Academy.",
     },
     {
       name: "Elvis Ferrao",
       role: "Coach",
-      img: require("../../assets/Staff/Elvis.jpg"),
+      img:
+        "https://firebasestorage.googleapis.com/v0/b/reactsmu.appspot.com/o/Elvis.jpg?alt=media&token=b08bc613-64f5-415b-b864-6353439d0a64",
       bio: "Performance Team member",
     },
     {
       name: "Jay Koradia",
       role: "Coach",
-      img: require("../../assets/Staff/Jay.jpg"),
+      img:
+        "https://firebasestorage.googleapis.com/v0/b/reactsmu.appspot.com/o/Jay.jpg?alt=media&token=83fbecd4-be58-47fc-a313-b4f666d5c020",
       bio: "coach",
     },
     {
       name: "Shreya Bhat",
       role: "Coach",
-      img: require("../../assets/Staff/Shreya.jpg"),
+      img:
+        "https://firebasestorage.googleapis.com/v0/b/reactsmu.appspot.com/o/Jay.jpg?alt=media&token=83fbecd4-be58-47fc-a313-b4f666d5c020",
       bio:
         "AIFF certified Grassroots Coach, Represented Mumai District in Inter Women's district in Jalgaon.",
     },
     {
       name: "Soureen Gaitonde",
       role: "Coach",
-      img: require("../../assets/Staff/soureeen.jpg"),
+      img:
+        "https://firebasestorage.googleapis.com/v0/b/reactsmu.appspot.com/o/soureeen.jpg?alt=media&token=df61c9d4-d970-4092-8e0a-05b12408439d",
       bio: "Player, Coach",
     },
     {
@@ -72,7 +77,8 @@ const Staff = () => {
     {
       name: "Ananya Dornal",
       role: "Social Media",
-      img: require("../../assets/Staff/anan.jpg"),
+      img:
+        "https://firebasestorage.googleapis.com/v0/b/reactsmu.appspot.com/o/anan.jpg?alt=media&token=d369229b-dad5-41de-b219-83d5604bc6c6",
       bio: "Player, Social media team",
     },
   ];

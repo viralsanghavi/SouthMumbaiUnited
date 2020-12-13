@@ -1,14 +1,7 @@
 /* css for overall */
-
-@font-face {
-  font-family: myFirstFont;
-  src: url("./assets/911Fonts.com_CenturyGothicRegular__-_911fonts.com_fonts_mhpY.ttf");
-}
-
 * ::after,
 ::before {
   box-sizing: border-box;
-  font-family: myFirstFont !important;
   display: block;
   height: 100%;
 }
@@ -78,8 +71,6 @@ a {
   color: black;
 }
 .navbar-text {
-  font-family: myFirstFont;
-
   font-size: 23px;
   font-weight: 700;
   color: #111;
@@ -95,8 +86,7 @@ a {
   }
 }
 .Navbar__pages {
-  font-family: myFirstFont;
-  text-transform: uppercase;
+  -transform: uppercase;
   color: #111;
   font-size: 15px;
   font-weight: 900;
@@ -188,7 +178,6 @@ a {
 
 .contact__loc > h1 {
   font-weight: 600;
-  font-family: "Raleway", sans-serif;
   margin-bottom: 15px;
   /* letter-spacing: 1px; */
   font-size: 48px;
@@ -264,7 +253,6 @@ a {
   padding: 20px 20px;
   max-width: calc(90vw - 40px);
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
   margin-top: 15px;
   float: right;
   margin-right: 80px;
@@ -290,7 +278,6 @@ a {
   outline: none;
   resize: none;
   border: 0;
-  font-family: "Montserrat", sans-serif;
   transition: all 0.3s;
   border-bottom: 2px solid #bebed2;
 }
@@ -310,7 +297,6 @@ a {
 .contact-button {
   padding: 6px 12px;
   margin: 8px 0 0;
-  font-family: "Montserrat", sans-serif;
   border: 2px solid #78788c;
   border-radius: 50px;
   width: 60%;
@@ -348,218 +334,6 @@ a {
 
 /* changes Above */
 
-/* floating social icons */
-
-.icons {
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  position: fixed;
-  z-index: 100;
-}
-
-.icons ul {
-  padding: initial;
-}
-
-.icons ul li {
-  background: rgb(47, 46, 46);
-  height: 40px;
-  width: 40px;
-  list-style-type: none;
-  padding-left: 12px;
-  padding-top: 6px;
-  margin-top: 5px;
-  color: #fff;
-}
-
-.facebook:hover {
-  background: #3b5998;
-}
-
-.instagram:hover {
-  background: #ff4800;
-}
-
-.twitter:hover {
-  background: #55acee;
-}
-
-.youtube:hover {
-  background: #ff0000;
-}
-
-.icons ul li:hover {
-  padding-left: 30px;
-  width: 100px;
-  transition: ease-in-out 0.8s;
-}
-
-/* scroll To Top */
-
-.scroll-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  font-size: 26px;
-  width: 50px;
-  height: 50px;
-  background-color: #333;
-  color: #ffa54b;
-  cursor: pointer;
-  outline: none;
-  border: 3px solid #ffa54b;
-  border-radius: 50%;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-  transition-property: background-color, color;
-}
-
-.scroll-to-top:hover {
-  cursor: pointer;
-  background-color: #ffa54b;
-  color: #333;
-}
-
-.S2top {
-  margin-left: 13px;
-}
-
-/* Meet The team page css Here */
-
-.team-list {
-  margin: 55px;
-}
-.member-list {
-  display: flex;
-  border: 1px solid;
-  width: 20%;
-  margin-top: 15px;
-}
-
-.staff-title {
-  text-align: center;
-  text-align: center;
-  font-family: serif;
-  font-size: 4em;
-  margin-top: 10px;
-  font-weight: 700;
-  padding: 20px;
-  color: darkred;
-}
-
-.team-container {
-  padding: 10px;
-  margin: 50px 100px;
-}
-
-.staff-card {
-  padding: 10px;
-  margin: 50px;
-  width: 25%;
-  min-width: 250px;
-  height: 300px;
-  overflow: hidden;
-  position: relative;
-  display: inline-block;
-}
-
-.team,
-#staff {
-  display: flex;
-  flex-wrap: wrap;
-  flex-grow: 3;
-  /* justify-content: center; */
-}
-
-.team-card {
-  left: 150px;
-  padding: 10px;
-  width: 25%;
-  min-width: 250px;
-  height: 300px;
-  overflow: hidden;
-  position: relative;
-  margin: 0 0.5% 1% 0;
-  display: inline-block;
-}
-
-.team-card:nth-of-type(3n) {
-  margin-right: 0;
-}
-
-.team-card img {
-  width: 100%;
-  min-height: 100%;
-  transition: all 0.9s;
-  justify-content: center;
-  object-fit: contain;
-}
-
-.team-card:hover img {
-  transform: scale(1.2, 1.2);
-}
-
-.data {
-  position: absolute;
-  bottom: 5%;
-  background: #fff;
-  text-align: center;
-  width: 90%;
-  height: 80px;
-  overflow: hidden;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  padding: 10px 5%;
-  box-sizing: border-box;
-  opacity: 0.8;
-  transition: all 0.4s;
-}
-
-.team-card:hover .data {
-  width: 100%;
-  height: 100%;
-  bottom: 0;
-  opacity: 0.9;
-  padding: 90px 10%;
-}
-
-.data h2 {
-  margin: 0 0 5px 0;
-  transition: color 0.4s;
-}
-
-.data p {
-  opacity: 0;
-  text-align: justify;
-  transition: all 0.2s;
-}
-
-.team-card:hover .data p,
-.team-card:hover .data a {
-  opacity: 1;
-}
-
-.data a {
-  color: #333;
-  text-decoration: none;
-  padding: 20px;
-  opacity: 0;
-}
-
-.data a:hover,
-.team-card:hover h2 {
-  color: teal;
-}
-
-@media (max-width: 799px) {
-  .team-card {
-    width: 100%;
-    margin-right: 0;
-  }
-}
-
 .btn-twtr {
   color: #ddd;
   border: 2px solid;
@@ -567,7 +341,6 @@ a {
   text-decoration: none;
   display: inline-block;
   padding: 5px 10px;
-  font-family: sans-serif;
   font-weight: 600;
   margin-top: 100px;
   opacity: 0.8;
@@ -594,7 +367,6 @@ a {
 }
 
 .static-hero__heading {
-  font-family: fcb-extra-bold, Arial, Helvetica Neue, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 5.6rem;
   line-height: 5.6rem;
@@ -651,7 +423,6 @@ a {
   line-height: 1.5;
   -webkit-font-smoothing: auto;
   font-weight: 400;
-  font-family: Roboto Slab;
   margin: auto;
 }
 
@@ -846,44 +617,9 @@ a {
   padding: 0;
 }
 
-#slideBg {
-  width: 100%;
-  height: 83vh;
-  background-position: center center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  object-fit: contain;
-  backface-visibility: hidden;
-  animation: slideBg 8s linear infinite 0s;
-  animation-timing-function: ease-in-out;
-  background-image: url("./assets//close-up-of-hand-holding-pencil-over-white-background-316466.jpg");
-}
-
-/* @keyframes slideBg {
-  0% {
-    background-image: url("./assets/girlWhole.jpeg");
-  }
-  25% {
-    background-image: url("./assets/boyWhole.jpeg");
-  }
-  50% {
-    background-image: url("./assets/close-up-of-hand-holding-pencil-over-white-background-316466.jpg");
-  }
-  75% {
-    background-image: url("./assets/close-up-of-hand-holding-pencil-over-white-background-316466.jpg");
-  }
-  100% {
-    background-image: url("./assets/close-up-of-hand-holding-pencil-over-white-background-316466.jpg");
-  }
-} */
-
 .spalsh > img {
   object-fit: contain;
 }
-
-/* .spalsher {
-  height: 100vh;
-} */
 
 .spalsh {
   height: 100vh;

@@ -6,7 +6,7 @@ import { FaYoutube, FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa";
 import "./Home.css";
 import Services from "../Services/Services";
 import Slider from "../Slider/Slider";
-import { IMAGES } from "../../Constants/constants";
+import { IMAGES } from "../../utils/constants";
 import Facebook from "../Social Media/Facebook";
 // import { PushPlayer } from "./Players/PushPlayer";
 

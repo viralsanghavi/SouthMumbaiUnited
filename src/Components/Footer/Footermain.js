@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Footer.css";
 import logo from "../../assets/Smulogo.png";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaYoutube, FaTwitter, FaInstagram } from "react-icons/fa";
 import { Subscribe } from "../Subscribe/Subscribe";
+import { Modal } from "reactstrap";
+import Map from "../AddressMap/Map";
+import ModalHeader from "reactstrap/lib/ModalHeader";
 
 function Footermain() {
+  const [showMap, setShowMap] = useState(false);
+  const toggle = () => setShowMap(!showMap);
   return (
     <footer className="footer">
       <div className="footer__banner">
@@ -50,14 +55,14 @@ function Footermain() {
             </p>
             <br />
           </div>
-          <a
-            href="https://www.google.com/maps/place/Chowpatty,+Girgaon,+Mumbai,+Maharashtra/@18.9542676,72.8098952,17z/data=!3m1!4b1!4m5!3m4!1s0x3be7ce0f115aae39:0x66ef35bcecb08dfe!8m2!3d18.9547494!4d72.8138818"
-            className="map"
-          >
-            <p>
-              <strong>MAP</strong>
-            </p>
-          </a>
+          <Modal isOpen={showMap} toggle={toggle} centered>
+            <ModalHeader toggle={toggle}>Our Location</ModalHeader>
+
+            <Map />
+          </Modal>
+          <p onClick={toggle} className="map-button">
+            <strong>MAP</strong>
+          </p>
         </div>
         <div className="footer__centerContentCenter">
           <nav>

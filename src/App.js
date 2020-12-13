@@ -5,7 +5,6 @@ import NavBar from "./Components/Navbar/Navbar";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import AboutUs from "./Components/About/AboutUs";
 import Contact from "./Components/Contact/contact";
-// import NavTeam from './Components/gallery/navigateTeam';
 import Staff from "./Components/Staff/staff";
 import Home from "./Components/Home/home";
 import PageNotFound from "./PageNotFound";
@@ -17,14 +16,13 @@ import BoysTeam from "./Components/Players/BoysTeam";
 import LoginToForm from "./Components/Login/LoginToForm";
 import Signin from "./Components/Players/SignIn";
 import { BuyNow } from "./Components/gallery/BuyNow";
-
-import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import Splash from "./Splash";
+import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 
 const App = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   setTimeout(() => {
     setIsLoading(false);

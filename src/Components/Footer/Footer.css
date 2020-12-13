@@ -3,10 +3,6 @@
   flex-direction: column;
   width: 100%;
 }
-@font-face {
-  font-family: myFirstFont;
-  src: url("../../assets/911Fonts.com_CenturyGothicRegular__-_911fonts.com_fonts_mhpY.ttf");
-}
 
 .footer__banner {
   font-size: 2.222222222222222rem;
@@ -15,7 +11,6 @@
   text-align: center;
   border-top: 2px solid black;
   border-bottom: none;
-  font-family: myFirstFont;
 }
 .footer__mainContent {
   /* margin-right: 40px; */
@@ -31,7 +26,6 @@
 }
 
 .footer__centerContentP1 {
-  font-family: "humanist_521_lightregular", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-size: 0.8888888888888888rem;
   line-height: 1.25;
@@ -58,7 +52,6 @@
   display: flex;
   /* flex-direction: column; */
 
-  font-family: "humanist_521_lightregular", Helvetica, Arial, sans-serif;
   color: #fff;
   background: #000;
   border-top: 7px solid #ffa54b;
@@ -99,7 +92,6 @@ li {
 .footer__centerContentCenter > nav > ul > li > a {
   color: white;
   font-weight: bold;
-  font-family: "humanist_521bold", Helvetica, Arial, sans-serif;
   font-size: 18px;
   font-size: 1rem;
   line-height: 1.111111111111111;
@@ -200,4 +192,7 @@ li {
 .searchIcon {
   font-size: 20px;
   margin-left: 10px;
+}
+.map-button {
+  cursor: pointer;
 }

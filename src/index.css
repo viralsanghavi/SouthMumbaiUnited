@@ -1,21 +1,20 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url("./assets/911Fonts.com_CenturyGothicRegular__-_911fonts.com_fonts_mhpY.ttf");
+}
 html,
 body {
   margin: 0;
   min-height: 100vh;
   background-color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: myFirstFont !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: #eaeded !important */
+  overflow-x: hidden;
+  position: relative;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-._2p3a {
-  max-width: 380px;
-  width: 350px;
 }
