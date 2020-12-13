@@ -56,7 +56,7 @@ const Staff = () => {
       name: "Shreya Bhat",
       role: "Coach",
       img:
-        "https://firebasestorage.googleapis.com/v0/b/reactsmu.appspot.com/o/Jay.jpg?alt=media&token=83fbecd4-be58-47fc-a313-b4f666d5c020",
+        "https://firebasestorage.googleapis.com/v0/b/reactsmu.appspot.com/o/Shreya.jpg?alt=media&token=8c0023a6-02f9-4590-a907-ff2e841c94bb",
       bio:
         "AIFF certified Grassroots Coach, Represented Mumai District in Inter Women's district in Jalgaon.",
     },
