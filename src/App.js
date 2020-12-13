@@ -22,7 +22,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 
 const App = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   setTimeout(() => {
     setIsLoading(false);

@@ -19,7 +19,7 @@ class Home extends React.Component {
     return (
       <div className="home">
         {/* <PushPlayer /> */}
-        <Slider slides={IMAGES} autoPlay={3} />
+        {/* <Slider slides={IMAGES} autoPlay={3} /> */}
 
         <Services />
         <div className="home__voilence">
