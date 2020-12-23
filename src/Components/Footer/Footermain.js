@@ -109,8 +109,8 @@ function Footermain() {
           </div>
           <div className="bottom">
             <center>
-              Copyright &copy; 2020 All Right Reserved - South Mumbai United
-              Football Club.
+              Copyright &copy; 2020 All Right Reserved - South Mumbai Sports PVT
+              Ltd.
             </center>
           </div>
         </div>

@@ -1,11 +1,11 @@
 import React from "react";
 import {
   Card,
-  Button,
+  // Button,
   CardImg,
   CardTitle,
-  CardText,
-  CardSubtitle,
+  // CardText,
+  // CardSubtitle,
   CardBody,
 } from "reactstrap";
 import "./Services.css";

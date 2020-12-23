@@ -6,7 +6,6 @@ import { FaYoutube, FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa";
 import "./Home.css";
 import Services from "../Services/Services";
 import Slider from "../Slider/Slider";
-import { IMAGES } from "../../utils/constants";
 import Facebook from "../Social Media/Facebook";
 // import { PushPlayer } from "./Players/PushPlayer";
 
@@ -19,7 +18,7 @@ class Home extends React.Component {
     return (
       <div className="home">
         {/* <PushPlayer /> */}
-        {/* <Slider slides={IMAGES} autoPlay={3} /> */}
+        <Slider />
 
         <Services />
         <div className="home__voilence">
