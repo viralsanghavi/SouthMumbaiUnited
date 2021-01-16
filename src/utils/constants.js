@@ -36,6 +36,10 @@ export const NAVBAR_MENU = [
     to: "/staff",
     name: "Staff",
   },
+  {
+    to: "/achievements",
+    name: "Achievements",
+  }
 ];
 export const SERVICES = [
   {

@@ -15,6 +15,7 @@ import GirlsTeam from "./Components/Players/GirlsTeam";
 import BoysTeam from "./Components/Players/BoysTeam";
 import LoginToForm from "./Components/Login/LoginToForm";
 import Signin from "./Components/Players/SignIn";
+import Achievements from "./Components/Achievements/Achievements"
 import { BuyNow } from "./Components/gallery/BuyNow";
 import { ToastContainer } from "react-toastify";
 import Splash from "./Splash";
@@ -71,6 +72,10 @@ const App = () => {
           <Route exact path="/">
             <ScrollToTop />
             <Home />
+          </Route>
+          <Route exact path="/achievements">
+            <ScrollToTop/>
+            <Achievements />
           </Route>
           <Route exact path="/team/boysteam">
             <BoysTeam />

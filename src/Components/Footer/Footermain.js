@@ -74,7 +74,10 @@ function Footermain() {
                 <Link to="/about">ABOUT</Link>
               </li>
               <li>
-                <Link to="team">TEAM</Link>
+                <Link to="/team">TEAM</Link>
+              </li>
+              <li>
+                <Link to="/achievements">achievements</Link>
               </li>
             </ul>
             <ul>
