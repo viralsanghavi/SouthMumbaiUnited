@@ -112,12 +112,9 @@ a {
 
 .Navbar {
   background: white;
-  /* align-items: center !important; */
   width: 100%;
   position: sticky !important;
   top: 0;
-  /* display: flex; */
-  /* align-items: center; */
   z-index: 1;
   transition-timing-function: ease-in-out !important;
   transition: all 1s !important;
@@ -125,16 +122,13 @@ a {
 }
 @media (min-width: 780px) {
   .nav__hide {
-    /* display: none; */
     transition: 1s ease-in-out;
   }
   .nav__short {
-    /* display: none; */
     height: 90px !important;
     background-color: white !important;
     box-shadow: 0 0 20px 0 #000;
     transition: 1s ease-in-out;
-    /* background-color: red !important; */
   }
 }
 

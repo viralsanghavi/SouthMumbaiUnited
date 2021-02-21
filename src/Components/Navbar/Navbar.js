@@ -18,11 +18,19 @@ const NavBar = () => {
   const toggle = () => setCollapsed(!collapsed);
   const [show, handleShow] = useState(false);
 
+  const transitionNavbar = () => {
+    if (window.scrollY > 100) {
+      handleShow(true);
+    } else {
+      handleShow(false);
+    }
+  };
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 80) {
-        handleShow(true);
-      } else handleShow(false);
+      window.addEventListener("scroll", transitionNavbar);
+      return () => {
+        window.removeEventListener("scroll", transitionNavbar);
+      }
     });
     return () => {
       window.removeEventListener("scroll");
