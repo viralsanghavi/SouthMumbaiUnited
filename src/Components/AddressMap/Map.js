@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-
 import "./Map.css";
+
 const Map = () => {
   useEffect(() => {
     delete L.Icon.Default.prototype._getIconUrl;

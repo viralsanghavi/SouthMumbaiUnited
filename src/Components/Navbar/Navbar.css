@@ -1,0 +1,75 @@
+.navbar__comp {
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: white;
+  opacity: 1;
+  z-index: 50;
+  transition-timing-function: ease-in-out !important;
+  transition: all 1s !important;
+  color: black;
+}
+.navbar__container {
+  height: 100%;
+  border-bottom: 1px solid hsl(0deg 0% 94%);
+  height: 60px;
+}
+.navbar__compHov {
+  box-shadow: 0 0 20px 0 #000;
+  transition: 1s ease-in-out;
+}
+
+.navbar__navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.navbar__logo {
+  border-radius: 50%;
+  object-fit: contain;
+  height: 45px;
+}
+
+.navbar__title {
+  font-size: 120%;
+  font-weight: 900;
+  color: black;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  background: #ffa54b;
+  color: white;
+}
+
+.pages__container {
+  padding: 1rem;
+  margin-left: auto;
+}
+.navbar__pages {
+  border: 1px solid transparent;
+  font-weight: bolder;
+}
+.navbar__pages:hover {
+  color: inherit;
+  border-bottom: 1px solid #ffa54b;
+}
+.nav__item:not(:last-child) {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.navbar__pageActive {
+  border-bottom: 1px solid #ffa54b;
+}
+@media (max-width: 767px) {
+  .navbar__logo {
+    display: none;
+  }
+  .navbar__container {
+    height: 100%;
+  }
+}

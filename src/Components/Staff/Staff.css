@@ -62,6 +62,10 @@
   border-radius: 35px;
   transition: all 0.5s ease-in-out;
 }
+.box,
+.img-fluid {
+  border-radius: 5px;
+}
 
 .team .box .image .social-icons i {
   font-size: 18px;

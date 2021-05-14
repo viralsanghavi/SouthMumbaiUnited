@@ -22,8 +22,26 @@ import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 
 const App = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  document.title = "South Mumbai United";
+  document.getElementsByTagName("META")[2].content =
+    "South Mumbai United is a football club based in Mumbai that encourages and develops players in the city by ensuring quality training in a supporting and friendly environment.";
 
+  const URLS = [
+    { uri: "/about", component: <AboutUs /> },
+    { uri: "/team", component: <Players /> },
+    { uri: "/contact", component: <Contact /> },
+    { uri: "/blog", component: <BuyNow /> },
+    { uri: "/buy-now", component: <BuyNow /> },
+    { uri: "/staff", component: <Staff /> },
+    { uri: "/login", component: <Signin /> },
+    { uri: "/records", component: <LoginToForm /> },
+    { uri: "/home", component: <Home /> },
+    { uri: "/", component: <Home /> },
+    { uri: "/team/boysteam", component: <BoysTeam /> },
+    { uri: "/team/girlsteam", component: <GirlsTeam /> },
+    { uri: "/*", component: <PageNotFound /> },
+  ];
   setTimeout(() => {
     setIsLoading(false);
   }, 1000);
@@ -38,47 +56,12 @@ const App = () => {
         <NavBar />
         <ToastContainer />
         <Switch>
-          <Route exact path="/about">
-            <ScrollToTop />
-            <AboutUs />
-          </Route>
-          <Route exact path="/team">
-            <ScrollToTop />
-            <Players />
-          </Route>
-          <Route exact path="/contact">
-            <ScrollToTop />
-            <Contact />
-          </Route>
-          <Route exact path="/blog">
-            <ScrollToTop />
-            <BuyNow />
-          </Route>
-          <Route exact path="/buyNow">
-            <ScrollToTop />
-            <BuyNow />
-          </Route>
-          <Route exact path="/staff">
-            <ScrollToTop />
-            <Staff />
-          </Route>
-          <Route exact path="/loginUser">
-            <Signin />
-          </Route>
-          <Route exact path="/records">
-            <LoginToForm />
-          </Route>
-          <Route exact path="/">
-            <ScrollToTop />
-            <Home />
-          </Route>
-          <Route exact path="/team/boysteam">
-            <BoysTeam />
-          </Route>
-          <Route exact path="/team/girlsteam">
-            <GirlsTeam />
-          </Route>
-          <Route path="*" component={PageNotFound} />
+          {URLS.map((r, index) => (
+            <Route exact path={r.uri} key={index}>
+              {r.component}
+              <ScrollToTop />
+            </Route>
+          ))}
         </Switch>
         <Footermain />
       </div>

@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import '../../App.css';
 import { Row } from 'reactstrap';
 import { RiMapPin2Line } from 'react-icons/ri'
 import { FiMail, FiPhone } from 'react-icons/fi'
 import fire from '../config/firebaseConfig';
 import { toast } from "react-toastify";
+import "./Contact.css";
 
 class Contact extends Component {
   constructor(props) {

@@ -122,12 +122,9 @@
   transition: transform 0.1s ease-in;
 }
 .home__voilenceDetail > h1 {
-  /* text-align: start !important; */
   font-size: 34px;
-  font-weight: 900;
+  font-weight: 600;
   text-transform: uppercase;
-
-  /* border-bottom: 1px solid #fff; */
 }
 
 .home__voilenceDetail > p > strong {
@@ -135,10 +132,9 @@
 }
 .home__voilenceDetail > p {
   font-size: 18px;
-  text-align: justify;
-  padding: 11px 60px;
+  text-align: left;
+  padding: 10px 60px;
   font-weight: 400;
-  font-style: normal;
 }
 .home__voilenceDetail {
   text-align: center;

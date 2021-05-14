@@ -1,21 +1,9 @@
-.zoom-wrapper > div {
-  z-index: 0 !important;
+.home__carousel {
+  height: 100%;
 }
-
-.nav .default-nav {
-  width: 15px !important;
-  margin-left: 5px !important;
+.slide >img {
+  height: 80px;
 }
-
-.slidershow {
-  position: relative;
-  height: 90vh;
-  width: auto;
-  margin: 0 auto;
-  overflow: hidden;
-}
-@media (max-width: 546px) {
-  .slidershow {
-    height: auto;
-  }
+.carousel-item > img {
+  height: 100vh;
 }

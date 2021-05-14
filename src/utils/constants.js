@@ -17,7 +17,7 @@ export const IMAGES = [
 
 export const NAVBAR_MENU = [
   {
-    to: "/",
+    to: "/home",
     name: "Home",
   },
   {
@@ -50,7 +50,7 @@ export const SERVICES = [
   },
   {
     serve: "Empowering women",
-    img: "https://img.fifa.com/image/upload/t_l1/vxchdkmhnkesesbore1o.jpg",
+    img: "https://firebasestorage.googleapis.com/v0/b/reactsmu.appspot.com/o/IMG_7060.jpg?alt=media&token=ac623277-9fb3-4853-a6c2-1f1055a8988b",
   },
   {
     serve: "Developing coaches",

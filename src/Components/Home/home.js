@@ -1,6 +1,6 @@
 import React from "react";
 import { TwitterTimelineEmbed, TwitterFollowButton } from "react-twitter-embed";
-import { Container, Row, Col, Card, Spinner } from "reactstrap";
+import { Container, Row, Col, Card, Spinner, Alert } from "reactstrap";
 import Youtube from "../gallery/Youtube";
 import { FaYoutube, FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa";
 import "./Home.css";
@@ -17,9 +17,7 @@ class Home extends React.Component {
 
     return (
       <div className="home">
-        {/* <PushPlayer /> */}
         <Slider />
-
         <Services />
         <div className="home__voilence">
           <div className="home__voilenceCard">
@@ -42,12 +40,12 @@ class Home extends React.Component {
               supports
               <br />
             </p>
-            <p className="text-center">
-              <strong>
-                #SayNoToDeforestation #SayNoToAnimalViolence #GoVegan
-                #ClimateChangeAwareness #SayNoToSpeciesism
-              </strong>
-            </p>
+            <Alert color="light" className="text-left">
+                <strong>
+                  #SayNoToDeforestation #SayNoToAnimalViolence #GoVegan
+                  #ClimateChangeAwareness #SayNoToSpeciesism
+                </strong>
+            </Alert>
           </div>
         </div>
 
