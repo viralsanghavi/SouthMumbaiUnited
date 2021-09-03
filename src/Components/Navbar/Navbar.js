@@ -34,7 +34,7 @@ const NavBar = () => {
   }, []);
   return (
     <div className={`navbar__comp ${show && "navbar__compHov"}`}>
-      <Navbar expand="md" className="navbar__container" color="white">
+      <Navbar expand="md" className="navbar__container" color="transparent">
         <Link to="/">
           <div className="navbar__navigation">
             <img alt="" src={logo} className="navbar__logo" />

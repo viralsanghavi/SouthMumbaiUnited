@@ -7,6 +7,7 @@ import { Subscribe } from "../Subscribe/Subscribe";
 import { Modal } from "reactstrap";
 import Map from "../AddressMap/Map";
 import ModalHeader from "reactstrap/lib/ModalHeader";
+import { MdEmail } from "react-icons/md";
 
 function Footermain() {
   const [showMap, setShowMap] = useState(false);
@@ -114,6 +115,22 @@ function Footermain() {
             </center>
           </div>
         </div>
+      </div>
+      <div className="footer__designerContainer">
+        <a href="mailto:stackzenpvtltd@gmail.com">
+          <MdEmail
+            color={"black"}
+            size={20}
+            className="media__link"
+            title="Email us"
+          />
+        </a>
+        <p className="footer__designer">
+          Designed and Developed by
+          <b>
+            <a href="https://www.instagram.com/stack_zen/">StackZen Pvt Ltd.</a>
+          </b>
+        </p>
       </div>
     </footer>
   );

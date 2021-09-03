@@ -22,7 +22,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
 
 const App = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   document.title = "South Mumbai United";
   document.getElementsByTagName("META")[2].content =
     "South Mumbai United is a football club based in Mumbai that encourages and develops players in the city by ensuring quality training in a supporting and friendly environment.";

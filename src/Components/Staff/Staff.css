@@ -101,5 +101,5 @@
 }
 
 .team .box:hover {
-  transform: translateY(-15px);
+  transform: scale(1.05);
 }

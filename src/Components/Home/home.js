@@ -17,7 +17,14 @@ class Home extends React.Component {
 
     return (
       <div className="home">
-        <Slider />
+        {/* <Slider /> */}
+        <div className="hero__container">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/reactsmu.appspot.com/o/Hero%2FIMG_0803.JPG?alt=media&token=16aaf8bf-77a9-4b83-905a-4596438a338c"
+            alt="hero"
+            className="home__hero"
+          />
+        </div>
         <Services />
         <div className="home__voilence">
           <div className="home__voilenceCard">
@@ -41,10 +48,10 @@ class Home extends React.Component {
               <br />
             </p>
             <Alert color="light" className="text-left">
-                <strong>
-                  #SayNoToDeforestation #SayNoToAnimalViolence #GoVegan
-                  #ClimateChangeAwareness #SayNoToSpeciesism
-                </strong>
+              <strong>
+                #SayNoToDeforestation #SayNoToAnimalViolence #GoVegan
+                #ClimateChangeAwareness #SayNoToSpeciesism
+              </strong>
             </Alert>
           </div>
         </div>

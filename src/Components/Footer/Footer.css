@@ -196,3 +196,16 @@ li {
 .map-button {
   cursor: pointer;
 }
+.footer__designerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+.footer__designer {
+  margin: 0.5rem 0;
+  text-decoration: none;
+}
+.footer__designer:hover {
+  color: black;
+}

@@ -11,6 +11,18 @@
   height: 100%;
 }
 
+.home__hero {
+  object-fit: cover;
+  width: 100%;
+  height: 90vh;
+  margin-bottom: 16px;
+}
+@media (max-width: 700px) {
+  .home__hero {
+    object-fit: contain;
+    height: 100%;
+  }
+}
 .home__twitter {
   margin-top: 25px;
   margin-right: 15px;
