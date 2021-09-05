@@ -126,7 +126,7 @@ function Footermain() {
           />
         </a>
         <p className="footer__designer">
-          Designed and Developed by
+          Designed and Developed by&nbsp;
           <b>
             <a href="https://www.instagram.com/stack_zen/">StackZen Pvt Ltd.</a>
           </b>

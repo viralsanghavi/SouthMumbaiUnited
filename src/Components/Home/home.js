@@ -7,7 +7,6 @@ import "./Home.css";
 import Services from "../Services/Services";
 import Slider from "../Slider/Slider";
 import Facebook from "../Social Media/Facebook";
-// import { PushPlayer } from "./Players/PushPlayer";
 
 class Home extends React.Component {
   render() {
@@ -17,13 +16,8 @@ class Home extends React.Component {
 
     return (
       <div className="home">
-        {/* <Slider /> */}
         <div className="hero__container">
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/reactsmu.appspot.com/o/Hero%2FIMG_0803.JPG?alt=media&token=16aaf8bf-77a9-4b83-905a-4596438a338c"
-            alt="hero"
-            className="home__hero"
-          />
+          <Slider />
         </div>
         <Services />
         <div className="home__voilence">

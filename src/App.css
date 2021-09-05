@@ -96,8 +96,6 @@ a {
   height: 100%;
 }
 
-
-
 .about__withBG::before {
   background-color: black;
   opacity: 0.4;
@@ -157,8 +155,6 @@ a {
     justify-content: center;
   }
 }
-
-
 
 #close-icon {
   width: 30px;
@@ -316,4 +312,11 @@ a {
 .contact__button {
   display: flex;
   justify-content: center;
+}
+.carousel-caption {
+  display: none !important;
+}
+
+.center {
+  text-align: center;
 }

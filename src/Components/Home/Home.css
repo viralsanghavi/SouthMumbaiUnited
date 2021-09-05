@@ -16,6 +16,7 @@
   width: 100%;
   height: 90vh;
   margin-bottom: 16px;
+  /* transition: all 0.3s ease-in-out; */
 }
 @media (max-width: 700px) {
   .home__hero {
@@ -43,7 +44,7 @@
   margin-top: 40px;
 }
 .home__poster {
-  height: 100px;
+  height: 150px;
   align-items: center;
   width: 100%;
   display: flex;
@@ -114,11 +115,14 @@
 
 .home__voilence {
   display: flex;
-  padding: 25px 40px;
+  padding: 3rem 40px;
   justify-content: space-evenly;
   background: #fff;
 }
 
+.alert{
+  margin-left: 2rem;
+}
 .home__voilenceCard {
   width: 80vw;
   display: flex;
