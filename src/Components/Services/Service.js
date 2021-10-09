@@ -1,29 +1,15 @@
 import React from "react";
-import {
-  Card,
-  // Button,
-  CardImg,
-  CardTitle,
-  // CardText,
-  // CardSubtitle,
-  CardBody,
-} from "reactstrap";
+import { Card, CardBody } from "reactstrap";
 import "./Services.css";
 
 const Service = ({ title, description }) => {
   return (
     <Card className="service__card">
-      <CardImg
-        top
-        width="100%"
-        className="service__image"
-        src={description}
-        alt="Card image cap"
-      />
+      <img className="service__image" src={description} alt="Card i cap" />
       <CardBody>
-        <CardTitle tag="h5" className="title__font">
+        <h5 tag="h5" className="title__font">
           {title}
-        </CardTitle>
+        </h5>
       </CardBody>
     </Card>
   );

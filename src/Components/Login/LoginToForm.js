@@ -27,16 +27,13 @@ function LoginToForm({ state }) {
         setData(messageList);
         setLoad(false);
       });
-    } catch (error) {
-      console.log(error);
-    }
+    } catch (error) {}
   }, []);
 
   // const handleSignOut = () => {
   //     // firebase
   //     //     .auth().signInWithEmailAndPassword(email, password)
   //     //     .then(res => {
-  //     //         console.log(res)
   //     //         setUser({ email: res.user.email, uid: res.user.uid })
   //     //     })
   //     firebase.auth().signOut().then(function () {
@@ -45,7 +42,6 @@ function LoginToForm({ state }) {
 
   //     })
   //         .catch(error => {
-  //             console.log(error)
   //             toast(error.message, { type: "error" })
   //         })
   // }
@@ -55,7 +51,6 @@ function LoginToForm({ state }) {
     // e.preventDefault()
     let userRef = fire.database().ref("messages/" + uid);
     userRef.remove();
-    console.log("removed");
   };
   return (
     <Container fluid className="dataContact">

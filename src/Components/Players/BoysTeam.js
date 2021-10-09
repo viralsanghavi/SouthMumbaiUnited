@@ -1,28 +1,35 @@
-import React, { useState, useEffect } from 'react'
-import { Container, Row, Table } from 'reactstrap'
-import './player.css'
-import { database } from '../config/firebaseConfig'
-
+import React, { useState, useEffect } from "react";
+import { Container, Row, Table } from "reactstrap";
+import "./player.css";
+import { database } from "../config/firebaseConfig";
+import { collection, getDocs } from "firebase/firestore";
 
 const PCard = ({ position }) => {
+  const [player, setPlayer] = useState([]);
 
-    const [player, setPlayer] = useState([])
+  useEffect(() => {
+    // this is where code runs
+    (async () => {
+      setPlayer([]);
+      const querySnapshot = await getDocs(collection(database, "boysTeam"));
+      let data = [];
+      querySnapshot.forEach(
+        (snapshot) =>
+          (data = [
+            ...data,
+            {
+              id: snapshot.id,
+              data: snapshot.data(),
+            },
+          ])
+      );
+      setPlayer(data);
+    })();
+  }, []);
 
-    useEffect(() => {
-        // this is where code runs
-        const unsubscribe = database.collection('boysTeam').orderBy('jeseryNumber').onSnapshot(snapshot => (
-            setPlayer(snapshot.docs.map(doc => ({ id: doc.id, data: doc.data() })))
-        ))
-        return async () => {
-            await unsubscribe()
-        }
-
-        // Will run once when component loads and never again if [] is kept blank
-    }, [])
-
-    return (
-        <Row data-aos="zoom-in" className="rowTeam">
-            {/* 
+  return (
+    <Row data-aos="zoom-in" className="rowTeam">
+      {/* 
             <div className="grid-12">
                 <h1>{position}</h1>
             </div>
@@ -52,44 +59,39 @@ const PCard = ({ position }) => {
                 }
 
             </div> */}
-            <Table striped responsive hover bordered>
-
-                <thead>
-                    <tr>
-                        <th>Player Name</th>
-                        <th>Position</th>
-                        <th>Jersey Number</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {player.map(
-                        play =>
-                            <tr key={play.id}>
-                                <td>{play.data.fname}&nbsp;{play.data.lname}</td>
-                                <td>{play.data.position}</td>
-                                <td>{play.data.jeseryNumber}</td>
-                            </tr>
-                    )}
-                </tbody>
-
-            </Table>
-
-        </Row >
-    )
-}
+      <Table striped responsive hover bordered>
+        <thead>
+          <tr>
+            <th>Player Name</th>
+            <th>Position</th>
+            <th>Jersey Number</th>
+          </tr>
+        </thead>
+        <tbody>
+          {player.map((play) => (
+            <tr key={play.id}>
+              <td>
+                {play.data.fname}&nbsp;{play.data.lname}
+              </td>
+              <td>{play.data.position}</td>
+              <td>{play.data.jeseryNumber}</td>
+            </tr>
+          ))}
+        </tbody>
+      </Table>
+    </Row>
+  );
+};
 
 function BoysTeam() {
-
-
-    return (
-
-        <Container fluid="xl" className="team__spaceLeft">
-            <PCard position="Goalkeeper" />
-            {/* <PCard position="Defender" />
+  return (
+    <Container fluid="xl" className="team__spaceLeft">
+      <PCard position="Goalkeeper" />
+      {/* <PCard position="Defender" />
             <PCard position="Midfielder" />
             <PCard position="Forward" /> */}
-        </Container>
-    )
+    </Container>
+  );
 }
 
-export default BoysTeam
+export default BoysTeam;

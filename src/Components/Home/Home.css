@@ -1,16 +1,3 @@
-.home__slider {
-  background-color: #f8f8f8;
-}
-
-.home__youtube {
-  background-color: #f8f8f8;
-}
-
-.home__inst {
-  background-color: #f8f8f8;
-  height: 100%;
-}
-
 .home__hero {
   object-fit: cover;
   width: 100%;
@@ -27,9 +14,14 @@
 .home__twitter {
   margin-top: 25px;
   margin-right: 15px;
+  max-width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;  
+  box-shadow: 0 0 8px 0 rgb(0 0 0 / 20%);
+  padding: 20px;
 }
 .home__twitterCard {
-  border-radius: 8px;
   margin-bottom: 50px;
 }
 
@@ -120,7 +112,7 @@
   background: #fff;
 }
 
-.alert{
+.alert {
   margin-left: 2rem;
 }
 .home__voilenceCard {

@@ -40,7 +40,6 @@ class Contact extends Component {
       toast("Your Response is Recorded.", { type: "info" });
 
     } catch (error) {
-      console.log(error)
       toast("Oppss Some Error Occured..", { type: "error" });
     }
 

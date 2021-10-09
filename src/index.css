@@ -2,17 +2,35 @@
   font-family: myFirstFont;
   src: url("./assets/911Fonts.com_CenturyGothicRegular__-_911fonts.com_fonts_mhpY.ttf");
 }
+@font-face {
+  font-family: primary-bold;
+  src: url("./assets/Kollektif-Bold.ttf");
+}
+@font-face {
+  font-family: primary-boldItalic;
+  src: url("./assets/Kollektif-BoldItalic.ttf");
+}
+@font-face {
+  font-family: primary-italic;
+  src: url("./assets/Kollektif-Italic.ttf");
+}
+@font-face {
+  font-family: primary;
+  src: url("./assets/Kollektif.ttf");
+}
 html,
 body {
   margin: 0;
   min-height: 100vh;
   background-color: #fff;
-  font-family: myFirstFont !important;
+  font-family: primary !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
 }
-
+.fontFacePrimary {
+  font-family: primary;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

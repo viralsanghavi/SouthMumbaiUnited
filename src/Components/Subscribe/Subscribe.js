@@ -15,7 +15,6 @@ export const Subscribe = () => {
             setEmail('')
 
         } catch (error) {
-            console.log(error)
             toast("Oppss Some Error Occured..", { type: "error" });
         }
 

@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect, useState } from "react";
-import { storage } from "../config/firebaseConfig";
+import { getStorage, ref, listAll, getDownloadURL } from "firebase/storage";
 
 import "./Slider.css";
 
@@ -47,21 +47,43 @@ const Slider = () => {
   const [data, setData] = useState([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   useEffect(() => {
-    getData();
-  }, []);
-  const getData = async () => {
-    await storage
-      .ref()
-      .child("Hero")
-      .listAll()
-      .then((res) => {
-        let promises = res.items.map((item) => item.getDownloadURL());
+    const getData = async () => {
+      // await storage
+      //   .ref()
+      //   .child("Hero")
+      //   .listAll()
+      //   .then((res) => {
+      //     let promises = res.items.map((item) => item.getDownloadURL());
 
-        Promise.all(promises).then((downloadURLs) => {
-          setData(downloadURLs);
+      //     Promise.all(promises).then((downloadURLs) => {
+      //       setData(downloadURLs);
+      //     });
+      //   });
+      const storage = getStorage();
+
+      const listRef = ref(storage, "gs://reactsmu.appspot.com/Hero");
+      // Find all the prefixes and items.
+      listAll(listRef)
+        .then((res) => {
+          res.items.forEach((itemRef) => {
+            // All the items under listRef.
+            getDownloadURL(ref(storage, itemRef))
+              .then((url) => {
+                setData([...data, url]);
+                // `url` is the download URL for 'images/stars.jpg'
+              })
+              .catch((error) => {
+                // Handle any errors
+              });
+          });
+        })
+        .catch((error) => {
+          // Uh-oh, an error occurred!
         });
-      });
-  };
+    };
+    return () => getData();
+  }, []);
+
   const previousSlide = () => {
     const lastIndex = data.length - 1;
     const shouldResetIndex = currentImageIndex === 0;

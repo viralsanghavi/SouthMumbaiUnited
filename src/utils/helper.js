@@ -20,6 +20,5 @@ export const getImageUrls = (urls) => {
     key: index,
     caption: `In Action ${index + 1}`,
   }));
-  console.log(displayUrls);
   return displayUrls;
 };

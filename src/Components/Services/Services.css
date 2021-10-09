@@ -1,13 +1,15 @@
 .services {
   padding: 2rem;
-  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: auto;
+  gap: 2rem;
 }
 .services__heading {
   margin-top: 35px;
 }
 .title__font {
-  font-size: 120%;
-  font-weight: 600;
+  font-weight: 400;
 }
 .service__card:hover,
 .title__font:hover {
@@ -17,4 +19,14 @@
 
 .service__card {
   cursor: pointer;
+}
+.service__card:hover {
+  transform: scale(1.05);
+  transition: 0.2s ease-out;
+}
+
+.service__image {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
 }
