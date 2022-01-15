@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import "./Footer.css";
 import logo from "../../assets/Smulogo.png";
-import { Link } from "react-router-dom";
-import { FaFacebookF, FaYoutube, FaTwitter, FaInstagram } from "react-icons/fa";
-import { Subscribe } from "../Subscribe/Subscribe";
-import { Modal } from "reactstrap";
+import {Link} from "react-router-dom";
+import {FaFacebookF, FaYoutube, FaTwitter, FaInstagram} from "react-icons/fa";
+import {Subscribe} from "../Subscribe/Subscribe";
+import {Modal, ModalHeader} from "reactstrap";
 import Map from "../AddressMap/Map";
-import ModalHeader from "reactstrap/lib/ModalHeader";
-import { MdEmail } from "react-icons/md";
+import {MdEmail} from "react-icons/md";
 
 function Footermain() {
   const [showMap, setShowMap] = useState(false);
@@ -17,7 +16,7 @@ function Footermain() {
       <div className="footer__banner">
         <h2>
           We Are{" "}
-          <strong style={{ borderBottom: "3px solid #ffa54b" }}>
+          <strong style={{borderBottom: "3px solid #ffa54b"}}>
             South Mumbai United
           </strong>
         </h2>
@@ -25,7 +24,7 @@ function Footermain() {
       <div className="footer_data">
         <div className="footer__centerContent">
           <div className="footer__logo">
-            <img alt="" src={logo} style={{ maxWidth: "100%" }} />
+            <img alt="" src={logo} style={{maxWidth: "100%"}} />
           </div>
         </div>
         <div className="footer__mainContent">
@@ -46,7 +45,7 @@ function Footermain() {
               }}
             >
               EMAIL :{" "}
-              <strong style={{ textTransform: "lowercase" }}>
+              <strong style={{textTransform: "lowercase"}}>
                 southmumbaiunitedfc@gmail.com
               </strong>
             </a>

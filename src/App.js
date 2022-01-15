@@ -1,22 +1,22 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import NavBar from "./Components/Navbar/Navbar";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import AboutUs from "./Components/About/AboutUs";
 import Contact from "./Components/Contact/contact";
 import Staff from "./Components/Staff/staff";
 import Home from "./Components/Home/home";
 import PageNotFound from "./PageNotFound";
 import Footermain from "./Components/Footer/Footermain";
-import ScrollToTop from "./scrollonRoute";
+// import ScrollToTop from "./scrollonRoute";
 import Players from "./Components/Players/Players";
 import GirlsTeam from "./Components/Players/GirlsTeam";
 import BoysTeam from "./Components/Players/BoysTeam";
 import LoginToForm from "./Components/Login/LoginToForm";
 import Signin from "./Components/Players/SignIn";
-import { BuyNow } from "./Components/gallery/BuyNow";
-import { ToastContainer } from "react-toastify";
+import {BuyNow} from "./Components/gallery/BuyNow";
+import {ToastContainer} from "react-toastify";
 import Splash from "./Splash";
 import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
@@ -28,19 +28,19 @@ const App = () => {
     "South Mumbai United is a football club based in Mumbai that encourages and develops players in the city by ensuring quality training in a supporting and friendly environment.";
 
   const URLS = [
-    { uri: "/about", component: <AboutUs /> },
-    { uri: "/team", component: <Players /> },
-    { uri: "/contact", component: <Contact /> },
-    { uri: "/blog", component: <BuyNow /> },
-    { uri: "/buy-now", component: <BuyNow /> },
-    { uri: "/staff", component: <Staff /> },
-    { uri: "/login", component: <Signin /> },
-    { uri: "/records", component: <LoginToForm /> },
-    { uri: "/home", component: <Home /> },
-    { uri: "/", component: <Home /> },
-    { uri: "/team/boysteam", component: <BoysTeam /> },
-    { uri: "/team/girlsteam", component: <GirlsTeam /> },
-    { uri: "/*", component: <PageNotFound /> },
+    {uri: "/about", component: <AboutUs />},
+    {uri: "/team", component: <Players />},
+    {uri: "/contact", component: <Contact />},
+    {uri: "/blog", component: <BuyNow />},
+    {uri: "/buy-now", component: <BuyNow />},
+    {uri: "/staff", component: <Staff />},
+    {uri: "/login", component: <Signin />},
+    {uri: "/records", component: <LoginToForm />},
+    {uri: "/home", component: <Home />},
+    {uri: "/", component: <Home />},
+    {uri: "/team/boysteam", component: <BoysTeam />},
+    {uri: "/team/girlsteam", component: <GirlsTeam />},
+    {uri: "/*", component: <PageNotFound />},
   ];
   setTimeout(() => {
     setIsLoading(false);
@@ -55,14 +55,12 @@ const App = () => {
       <div className="page-container">
         <NavBar />
         <ToastContainer />
-        <Switch>
+        <Routes>
           {URLS.map((r, index) => (
-            <Route exact path={r.uri} key={index}>
-              {r.component}
-              <ScrollToTop />
-            </Route>
+            <Route path={r.uri} key={index} element={r.component} />
           ))}
-        </Switch>
+          {/* <ScrollToTop /> */}
+        </Routes>
         <Footermain />
       </div>
     </BrowserRouter>

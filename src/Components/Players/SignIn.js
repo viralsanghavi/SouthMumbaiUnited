@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import {
   Container,
   Form,
@@ -14,24 +14,25 @@ import {
   CardFooter,
 } from "reactstrap";
 
-import { toast } from "react-toastify";
-import { Redirect } from "react-router-dom";
+import {toast} from "react-toastify";
+import {useNavigate} from "react-router-dom";
 import fire from "../config/firebaseConfig";
 
 const Signin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [user, setUser] = useState([]);
+  let navigate = useNavigate();
 
   const handleSignup = () => {
     fire
       .auth()
       .signInWithEmailAndPassword(email, password)
       .then((res) => {
-        setUser({ email: res.user.email, uid: res.user.uid });
+        setUser({email: res.user.email, uid: res.user.uid});
       })
       .catch((error) => {
-        toast(error.message, { type: "error" });
+        toast(error.message, {type: "error"});
       });
   };
 
@@ -40,14 +41,7 @@ const Signin = () => {
     handleSignup();
   };
   if (user.uid) {
-    return (
-      <Redirect
-        to={{
-          pathname: "/records",
-          state: user.uid,
-        }}
-      />
-    );
+    return navigate("/records", {state: user.id});
   }
 
   return (
